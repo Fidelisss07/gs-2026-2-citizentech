@@ -24,10 +24,15 @@ Responsável: Gustavo Fidelis. Entrega: ZIP com 6 arquivos de nome fixo.
 | `3_prompts_kit.md` | Pronto (falta o resultado das iterações após rodar) |
 | `4_README.md` | A fazer (precisa dos prints do Colab) |
 | `5_certificacao.txt` | Gerado pela última célula do notebook |
-| `6_Chat_Log.txt` | A fazer (registro do uso de IA) |
+| `6_Chat_Log.txt` | Rascunho pronto (atualizar no fim) |
 
 ## Como rodar
 
 1. Abrir `1_Notebook_GS2026_2.ipynb` no Google Colab.
 2. Em Secrets (ícone de chave), criar `OLLAMA_API_KEY` com a sua chave. **Nunca** colar a chave no código.
 3. Runtime → Run all. O arquivo `2_dados_servico.json` é gerado pelo próprio notebook.
+
+## Modelo
+
+O `llama3.2:1b` não está no catálogo do Ollama Cloud. A Seção 1 tenta o Cloud e, se não der, instala o Ollama
+dentro do Colab e baixa o modelo (grátis, ~2 minutos). Confirmar com o Prof. Jorge se isso está ok.
