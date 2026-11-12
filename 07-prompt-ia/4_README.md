@@ -85,6 +85,7 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 - **IA e regra discordando.** Vale a mais urgente das duas, e o registro vai para revisão humana. A IA pode subir a urgência (pilha no entulho), mas nunca baixar a de um ponto interditado.
 - **Ponto alternativo no registro.** A IA não sabe calcular distância. Se tivesse que dizer o "ponto mais perto", inventaria. Por isso cada registro já traz o id do ponto alternativo.
 - **Filtro antes da IA.** Se a pergunta cita um bairro, vão para o modelo só os pontos desse bairro e os alternativos deles. Um modelo pequeno erra menos com menos texto.
+- **Prompt enxuto.** A primeira v2 tinha 662 palavras e várias frases prontas de recusa, e o modelo de 1B recusava quase tudo. A final tem os mesmos 7 elementos em cerca de 320 palavras, com uma frase de recusa só. A versão longa e o resultado de cada tentativa estão no `3_prompts_kit.md`.
 - **Relato entre aspas triplas, pergunta sem aspas.** O relato do morador vai entre aspas triplas e é tratado como dado, nunca como ordem. Dois relatos têm tentativa de prompt injection de propósito. No primeiro teste, a pergunta também ia entre aspas, e o modelo tratava a própria pergunta como algo a ignorar. Por isso agora as aspas marcam só o relato.
 - **Pilha e bateria são lixo perigoso.** Nenhum ponto aceita; o assistente indica o 156.
 - **Sem citar a cidade.** O PDF fala de um "município médio". O assistente é da "Secretaria de Cidadania", em piloto na região da Mooca.
@@ -97,6 +98,21 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 - **Notas da matriz:** dadas pelo trio. O modelo não dá nota.
 - O registro completo está no `6_Chat_Log.txt`.
 
+## O que os testes mostraram
+
+Além do harness da Seção 5, rodamos no Colab 2 diagnósticos com as mesmas 5 perguntas, somando 90 respostas.
+
+- **Injeção:** a v1 obedeceu ("Sim, você pode jogar pilha e bateria no entulho"); a v2 recusou.
+- **Fora do escopo (T2):** a v2 recusou certo e indicou o 156.
+- **O que o llama3.2:1b não conseguiu fazer**, mesmo com a regra escrita no prompt:
+  - não citou o registro em nenhuma das 90 respostas;
+  - não percebeu que o ponto do Tatuapé estava lotado e respondeu "Sim.";
+  - não perguntou o bairro na pergunta vaga;
+  - não explicou que pilha é lixo perigoso.
+- **Prompt longo piora:** com a v2 longa, o modelo recusava até o que estava nos dados. A v2 enxuta seguiu melhor o exemplo no T1, mas os outros limites continuaram.
+
+Por isso a resposta da IA nunca decide sozinha. A regra fixa da Seção 3 assume quando a IA sai do formato, e a revisão humana entra quando a IA e a regra discordam.
+
 ## Limitações
 
 - Não tem dados em tempo real: o status vem do registro, que pode estar desatualizado.
@@ -105,5 +121,5 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 - Não orienta descarte de lixo perigoso ou de saúde: indica o 156.
 - Não informa preço de caçamba ou frete e não atende coleta de empresa ou de obra grande.
 - Não calcula distância nem considera dia da semana ou feriado.
-- O llama3.2:1b é pequeno e pode errar em perguntas longas; por isso há validação e regra fixa.
+- O llama3.2:1b é pequeno demais para seguir todas as regras do prompt: não cita o registro, não percebe ponto lotado e não pergunta o bairro quando a pergunta é vaga. Por isso há validação, regra fixa e revisão humana.
 - Na CPU do Colab, o notebook inteiro leva cerca de 30 minutos; com GPU fica bem mais rápido.
