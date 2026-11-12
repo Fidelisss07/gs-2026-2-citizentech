@@ -85,7 +85,7 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 - **IA e regra discordando.** Vale a mais urgente das duas, e o registro vai para revisão humana. A IA pode subir a urgência (pilha no entulho), mas nunca baixar a de um ponto interditado.
 - **Ponto alternativo no registro.** A IA não sabe calcular distância. Se tivesse que dizer o "ponto mais perto", inventaria. Por isso cada registro já traz o id do ponto alternativo.
 - **Filtro antes da IA.** Se a pergunta cita um bairro, vão para o modelo só os pontos desse bairro e os alternativos deles. Um modelo pequeno erra menos com menos texto.
-- **Relato e pergunta entre aspas triplas.** O relato do morador é tratado como dado, nunca como ordem. Dois relatos têm tentativa de prompt injection de propósito.
+- **Relato entre aspas triplas, pergunta sem aspas.** O relato do morador vai entre aspas triplas e é tratado como dado, nunca como ordem. Dois relatos têm tentativa de prompt injection de propósito. No primeiro teste, a pergunta também ia entre aspas, e o modelo tratava a própria pergunta como algo a ignorar. Por isso agora as aspas marcam só o relato.
 - **Pilha e bateria são lixo perigoso.** Nenhum ponto aceita; o assistente indica o 156.
 - **Sem citar a cidade.** O PDF fala de um "município médio". O assistente é da "Secretaria de Cidadania", em piloto na região da Mooca.
 
