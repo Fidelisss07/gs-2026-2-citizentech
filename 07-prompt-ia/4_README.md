@@ -44,11 +44,11 @@ O assistente responde só com base nos 12 registros do `2_dados_servico.json`. Q
 ## Como executar
 
 1. Abra o `1_Notebook_GS2026_2.ipynb` no [Google Colab](https://colab.research.google.com).
-2. No ícone de chave (Secrets), na barra da esquerda, crie o segredo `OLLAMA_API_KEY` com a sua chave do Ollama Cloud e ligue o "Acesso ao notebook".
-3. Clique em **Ambiente de execução → Executar tudo** (Runtime → Run all).
+2. (Opcional, bem mais rápido) Em **Ambiente de execução → Alterar o tipo de ambiente de execução**, escolha **GPU T4**.
+3. Clique em **Ambiente de execução → Executar tudo** (Runtime → Run all). A primeira parte instala o Ollama e baixa o modelo, o que leva uns 2 minutos. Na CPU, o notebook inteiro leva cerca de 30 minutos.
 4. O notebook grava o `2_dados_servico.json` na pasta do Colab (ícone de pasta). Baixe o arquivo.
 
-Não usa nenhuma API paga. A chave nunca aparece no notebook: ela é lida com `userdata.get('OLLAMA_API_KEY')`.
+**Por que o Ollama roda dentro do Colab:** o PDF pede o `llama3.2:1b` no Ollama Cloud, mas esse modelo não está disponível lá; por isso o notebook roda o mesmo modelo com o Ollama dentro do Colab. Não usa API paga nem chave de API.
 
 Se o Colab cair no meio, rode tudo de novo. Se uma chamada ao modelo falhar, o notebook não para: a regra fixa da Seção 3 assume e a resposta fica marcada como erro na tabela.
 
@@ -67,12 +67,21 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 ## Decisões técnicas
 
 - **Frente B.** O tema do trio é o lixo do bairro, e a frente B é a que fala de descarte.
+- **Ollama dentro do Colab.** No Ollama Cloud, o `llama3.2:1b` dá erro 404 (modelo não encontrado), e os modelos que existem lá pedem créditos pagos (erro 402). O PDF pede esse modelo e não permite API paga. Por isso o notebook instala o Ollama no próprio Colab e roda o mesmo `llama3.2:1b`, sem chave.
 - **Dados simulados com erros de propósito.** Os dados brutos têm `acessivel` escrito como texto, horários em formatos diferentes, um ponto lotado sem motivo e um id repetido. Assim as 4 regras de negócio têm o que corrigir, e o notebook mostra quantas correções fez.
 - **Onde ficam as 4 regras.** O PDF fala da Seção 3 num lugar e da Seção 1 em outro. Aplicamos as regras na Seção 1, antes de gravar o JSON, e conferimos de novo na Seção 3, relendo o arquivo gravado.
 - **Regra 1.** O texto da regra 1 no PDF diz o contrário da tabela do esquema. Seguimos a tabela: status diferente de `ativo` precisa de motivo.
 - **Horário.** "24h" não é uma hora e "08:00" é texto. Por isso todo horário vira um formato só e a função `esta_aberto()` compara em minutos. Nos testes a hora da consulta é fixa (10:00), para o resultado poder ser repetido.
 - **Temperatura 0.1.** Para classificar e responder, queremos a mesma saída para a mesma entrada, e não criatividade.
 - **Validação e regra fixa.** A resposta da IA só vale se a urgência for `urgente`, `atencao` ou `ok`, nenhum campo vier vazio e o resumo tiver até 140 caracteres. Se falhar, a regra fixa decide.
+- **Limpeza da urgência.** No primeiro teste, o modelo escreveu "atenção", "Atenção" e até "atenuada", e 8 de 12 respostas caíram na regra fixa. Agora tiramos acentos e espaços e passamos para minúsculas antes de comparar. "Atenção" vira `atencao` e é aceita; palavras que não são `urgente`, `atencao` ou `ok`, como "atenuada", continuam recusadas.
+- **Velocidade.** Na CPU do Colab, cada chamada leva de 30 segundos a 1,5 minuto. Para ganhar tempo sem mudar o resultado:
+  - no enriquecimento, a resposta tem no máximo 150 tokens (um JSON válido usa bem menos);
+  - nas respostas do assistente, o limite de 1024 tokens só trava uma resposta que não acaba;
+  - o harness faz todas as perguntas da v1 e depois todas da v2, e assim o Ollama reaproveita o começo do prompt;
+  - o modelo fica carregado entre as seções.
+
+  O contexto foi fixado em 8192 tokens, para o prompt v2 com os 12 registros caber sem corte.
 - **IA e regra discordando.** Vale a mais urgente das duas, e o registro vai para revisão humana. A IA pode subir a urgência (pilha no entulho), mas nunca baixar a de um ponto interditado.
 - **Ponto alternativo no registro.** A IA não sabe calcular distância. Se tivesse que dizer o "ponto mais perto", inventaria. Por isso cada registro já traz o id do ponto alternativo.
 - **Filtro antes da IA.** Se a pergunta cita um bairro, vão para o modelo só os pontos desse bairro e os alternativos deles. Um modelo pequeno erra menos com menos texto.
@@ -97,3 +106,4 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 - Não informa preço de caçamba ou frete e não atende coleta de empresa ou de obra grande.
 - Não calcula distância nem considera dia da semana ou feriado.
 - O llama3.2:1b é pequeno e pode errar em perguntas longas; por isso há validação e regra fixa.
+- Na CPU do Colab, o notebook inteiro leva cerca de 30 minutos; com GPU fica bem mais rápido.

@@ -7,7 +7,7 @@ Biblioteca com tudo o que é preciso para reaproveitar o assistente: o system pr
 
 ## Como usar
 
-- **Modelo:** `llama3.2:1b` (Ollama Cloud), temperatura 0.1.
+- **Modelo:** `llama3.2:1b`, rodando com o Ollama dentro do Colab, temperatura 0.1. O PDF pede o `llama3.2:1b` no Ollama Cloud, mas esse modelo não está disponível lá; por isso o notebook roda o mesmo modelo com o Ollama dentro do Colab.
 - **Mensagem `system`:** o system prompt final, abaixo.
 - **Mensagem `user`:** a hora da consulta, os registros dos pontos (um por linha, com o relato do morador entre aspas triplas) e a pergunta do morador entre aspas triplas. O formato exato está na função `perguntar()` da Seção 4 do notebook. Exemplo resumido:
 
