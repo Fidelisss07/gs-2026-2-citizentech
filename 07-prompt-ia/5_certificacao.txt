@@ -1,0 +1,14 @@
+GS 2026.2 - Prompt and Artificial Intelligence - CERTIFICACAO
+Ciclo Verde - Turma 1CCPR - Trio - Frente B (Descarte e sustentabilidade)
+
+INTEGRANTES
+Gustavo Fidelis de Souza e Silva - RM 574666
+Rafael Meirelles - RM 574897
+Ana [SOBRENOME] - RM [A CONFIRMAR]
+
+LINKS
+Notebook no Colab: [COLAR O LINK - Compartilhar > "Qualquer pessoa com o link"]
+Repositorio: https://github.com/Fidelisss07/gs-2026-2-citizentech/tree/main/07-prompt-ia
+
+TELA FINAL DO NOTEBOOK
+[COLAR AQUI A SAIDA DA ULTIMA CELULA DA SECAO 7, DEPOIS DO RUN ALL NO COLAB]
