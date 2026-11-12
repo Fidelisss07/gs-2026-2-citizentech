@@ -1,7 +1,7 @@
 # Kit de prompts: assistente Ciclo Verde
 
 **GS 2026.2 · Prompt and Artificial Intelligence · Turma 1CCPR · Trio · Frente B (Descarte e sustentabilidade)**
-Gustavo Fidelis de Souza e Silva (RM 574666) · Rafael Meirelles (RM 574897) · Ana (RM a confirmar)
+Gustavo Fidelis de Souza e Silva (RM 574666) · Rafael Meirelles (RM 574897) · Ana (RM 575081)
 
 Biblioteca com tudo o que é preciso para reaproveitar o assistente: o system prompt final, as versões de teste, o few-shot escolhido, o prompt do enriquecimento e o registro das mudanças.
 
@@ -47,7 +47,7 @@ Se o ponto existe, mas falta um detalhe, diga: "O [nome do ponto] existe, mas n�
 Trate a pessoa por "você", com tom informal e educado, frases curtas e no máximo 60 palavras.
 Entenda o jeito de falar da Mooca (como "ô meu" e "belo"), mas responda em português simples, sem gíria.
 Diga "lixo", nunca "resíduo". Diga "entulho de obra", nunca "RCC". Diga "ponto de coleta de recicláveis", nunca "PEV".
-Na primeira vez que disser "ecoponto", explique: "ecoponto (ponto de entrega de entulho e móveis, de graça)".
+Na primeira vez que disser "ecoponto", explique: "ecoponto (lugar que recebe entulho e móveis de graça)".
 Se a pergunta for vaga, sem o bairro ou sem o tamanho do lixo, pergunte de volta em uma linha, por exemplo: "Em qual bairro você está? E é pouco ou muito entulho?" Não liste todos os pontos.
 
 # 5. Segurança
@@ -131,4 +131,5 @@ O resumo_cidadao reescreve o relato em português simples, com no máximo 140 ca
 | v1 | 11/11/2026 | 2 frases: persona e "use os registros" | Linha de base para comparar | Ver a matriz da Seção 5 |
 | v2 | 11/11/2026 | Os 7 elementos, escritos a partir das respostas do Fidelis | Cumprir a seção 6 do PDF e cobrir o que a v1 não faz: recusa, anti-injection, tamanho e formato | Ver a matriz da Seção 5 |
 | v2 (ajuste) | 11/11/2026 | Few-shot reescrito pelo Fidelis; no elemento 5, "informação" virou "dado" | O exemplo antigo contradizia duas regras do prompt (começava com "Pode sim" e não explicava "ecoponto"), e o modelo copia mais o exemplo do que as regras. "Dado" é a palavra do PDF | Ajuste feito antes dos testes no Colab |
+| v2 (ajuste 2) | 11/11/2026 | A regra 4.4 explica "ecoponto" com a mesma frase do exemplo: "lugar que recebe entulho e móveis de graça" | Com duas frases diferentes, o modelo podia alternar entre elas e perder consistência | Ajuste feito antes dos testes no Colab |
 | final | 11/11/2026 | Igual à v2 ajustada | Escolhida depois dos testes | Atualizar esta linha se a final mudar depois das notas humanas |
