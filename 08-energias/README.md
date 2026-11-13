@@ -24,5 +24,5 @@ gs-2026-citizentech/
 ├── docs/
 │   ├── consumo-energetico.md  ← cálculos e justificativas do consumo energético
 │   └── fundamentacao-rede-eletrica.md       ← fundamentação teórica com cálculos, benefícios, justificativas, limitações e referências
-└── fundamentacao-energia-solar.md       ← fundamentação teórica com cálculos, benefícios, justificativas, limitações e referências
+│   └── fundamentacao-energia-solar.md       ← fundamentação teórica com cálculos, benefícios, justificativas, limitações e referências
 ```
