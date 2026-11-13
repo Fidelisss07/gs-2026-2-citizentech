@@ -1,0 +1,9 @@
+GS 2026.2 - Data Structures and Algorithms - Mapa dos Pontos Viciados
+Ciclo Verde - Turma 1CCPR - Trio
+
+Gustavo Fidelis de Souza e Silva - RM 574666
+Rafael Meirelles - RM 574897
+Ana - RM 575081
+
+Video de demonstracao (ate 3 minutos): [COLAR O LINK DEPOIS DA GRAVACAO, 17/11]
+Repositorio: https://github.com/Fidelisss07/gs-2026-2-citizentech/tree/main/03-estruturas-dados

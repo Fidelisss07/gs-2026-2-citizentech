@@ -1,0 +1,41 @@
+%% Diagrama de Atividades (UML) do Mapa dos Pontos Viciados.
+%% Notação UML: círculo preto = início; alvo (círculo dentro de um anel) = fim;
+%% caixas arredondadas = ações; losangos = decisões; losango vazio = junção.
+flowchart TD
+    I((" ")):::inicio --> A{"Carregar dados<br/>de exemplo?"}
+    A -- sim --> B("Carregar 18 ocorrências<br/>simuladas nos 6 vetores")
+    A -- não --> M
+    B --> M("Mostrar o menu<br/>e ler a opção")
+    M --> V{"Opção válida?"}
+    V -- não --> E("Avisar: valor inválido")
+
+    V -- "1: cadastrar" --> C1("Escolher tipo de lixo e bairro;<br/>ler local, voltas e dias<br/>(repete até o valor ser válido)")
+    C1 --> C2("Guardar a ocorrência<br/>no fim dos 6 vetores")
+    C2 --> C3{"Local com 3+ registros<br/>ou lixo voltou 3+ vezes?"}
+    C3 -- sim --> C4("Mostrar alerta de ponto<br/>viciado e o motivo")
+
+    V -- "2 a 7: consultar<br/>e analisar" --> H{"Há ocorrências<br/>cadastradas?"}
+    H -- não --> H0("Avisar: nenhuma<br/>ocorrência cadastrada")
+    H -- sim --> Q{"Qual opção?"}
+    Q -- "2: listar" --> L("Montar a tabela<br/>com todas")
+    Q -- "3 ou 4: buscar" --> S1("Escolher o tipo<br/>de lixo ou o bairro") --> S2("Busca sequencial:<br/>percorrer o vetor e<br/>guardar as posições")
+    Q -- "5: ranking" --> R1("Escolher o critério:<br/>reincidência ou dias") --> R2("Copiar os vetores e<br/>ordenar por seleção")
+    Q -- "6: estatísticas" --> T("Contadores por tipo e bairro;<br/>acumuladores de dias e voltas")
+    Q -- "7: comparar" --> K("Ordenar por seleção e por<br/>bolha e contar as comparações")
+    L --> O("Mostrar o resultado")
+    S2 --> O
+    R2 --> O
+    T --> O
+    K --> O
+
+    E --> J{" "}
+    C3 -- não --> J
+    C4 --> J
+    H0 --> J
+    O --> J
+    J -- "voltar ao menu" --> M
+
+    V -- "0: sair" --> F(((" "))):::fim
+
+    classDef inicio fill:#111,stroke:#111,color:#111
+    classDef fim fill:#111,stroke:#fff,stroke-width:3px,color:#111
