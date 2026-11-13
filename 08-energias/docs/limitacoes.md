@@ -14,5 +14,4 @@
 
 - A troca da bateria não entrou no horizonte de 10 anos.
   
-- O projeto é deficiente em questão de viabilidade, pois não tem a presença de um engenharia e possui caráter apenas de validação energética e ambiental,
-- sem contar estudo civil e urbano por profissionais habilitados.
+- O projeto é deficiente em questão de viabilidade, pois não tem a presença de um engenharia e possui caráter apenas de validação energética e ambiental, sem contar estudo civil e urbano por profissionais habilitados.
