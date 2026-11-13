@@ -27,4 +27,6 @@ gs-2026-citizentech/
 │   └── fundamentacao-energia-solar.md       ← fundamentação teórica com cálculos, benefícios, justificativas, limitações e
 │   └── comparacao-sensibilidade.md       ← comparação de alternativas (custos, consumo, viabilidade, impacto ambiental, vantagens e limitações) e sensibilidades das alternativas
 referências
+│   └── fontes.md       ← fontes de dados e pesquisa para determinação das premissas
+│   └── limitacoes.md       ← limitações identificadas do projeto
 ```
