@@ -14,4 +14,4 @@
 ## Justificativa das premissas
 - A bomba de 40W com 2h por dia é um limite superior: a automação só liga quando a umidade cai abaixo de 45%.
 - O ESP32 com Wi-Fi consome entre 0,5 W e 1 W, e o sensor capacitivo consome cerca de 0,00004 Watts, então foi adotado 1W em 24h, que cobre os dois.
-- Os refletores de 20W por 12h cobrem o período das 18h às 06h, eles respondem por 480 dos 544 Wh diários (88 % do consumo), então a iluminação define o tamanho do sistema.
+- Os refletores de 20W por 12h cobrem o período das 18h às 06h, eles respondem por 480 dos 544 Wh diários (88% do consumo), então a iluminação define o tamanho do sistema.
