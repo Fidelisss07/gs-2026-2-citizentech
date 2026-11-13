@@ -22,7 +22,7 @@ with st.sidebar:
     h_led = st.slider("Horas de luz por noite", 1, 14, int(eq0.loc[2, "horas_dia"]))
     h_bomba = st.slider("Horas de bomba por dia (máximo)", 0.25, 2.0, float(eq0.loc[0, "horas_dia"]), 0.25)
     tarifa = st.number_input("Tarifa Enel B3 sem tributos (R$/kWh)", value=p0["tarifa_enel_sem_tributos_kwh"], format="%.5f")
-    reaj = st.slider("Reajuste anual da tarifa", 0.0, 0.5, p0["reajuste_tarifa_aa"], 0.01)
+    reaj = st.slider("Reajuste anual da tarifa",min_value=0.0,max_value=0.5,value=float(p0["reajuste_tarifa_aa"]),step=0.01)
     painel = st.select_slider("Painel solar (Wp)", [100, 150, 200, 300, 450], p0["painel_wp"])
     bateria = st.select_slider("Bateria LiFePO4 12,8 V (Ah)", [30, 50, 100, 200], p0["bateria_ah"])
     c_ah = st.number_input("Preço da bateria por Ah (R$/Ah)", value=float(p0["custo_bateria_por_ah"]), step=1.0)
