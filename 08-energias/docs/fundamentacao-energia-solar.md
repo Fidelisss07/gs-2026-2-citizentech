@@ -14,8 +14,8 @@ A energia solar atende a demanda de 17,52 kWh por mês para uma bomba, um sensor
 
 Esse arranjo muda a rotina do espaço. A bomba passa a ligar quando o sensor indica terra seca, e a rega deixa de depender de alguém estar presente. As luminárias permitem uso da horta à noite. Como o sistema opera em 12V de corrente contínua, o risco elétrico para voluntários é menor do que numa instalação de 127V ou 220V, e não há ruído nem emissão local, o que combina com um espaço de cultivo e compostagem.
 
-A escolha é assertiva financeiramente. Ao invés de pagar R$7.239,20 em 10 anos, o gasto estimado na rede solar é de R$6.000. Dividindo pelos 2.102,40 kWh (17,52 * 120) efetivamente consumidos, o custo médio fica em torno de R$3,44 por kWh na rede e R$2,80 por kWh no solar.
-*Cálculo ilustrativo do grupo, sem desconto de valor no tempo e sem troca de bateria.*
+A escolha é assertiva financeiramente. Ao invés de pagar R$8.439,20 em 10 anos, o gasto estimado na rede solar é de R$6.699,60. Dividindo pelos 2.102,40 kWh (17,52 * 120) efetivamente consumidos, o custo médio fica em torno de R$4,01 por kWh na rede e R$3,18 por kWh no solar.
+*Cálculo ilustrativo do grupo.*
 
 
 ## Justificativa da escolha da energia
