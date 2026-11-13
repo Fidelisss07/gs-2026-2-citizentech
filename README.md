@@ -41,5 +41,5 @@ ODS 11 (cidades sustentáveis), 12 (consumo e produção responsáveis) e 13 (a�
 ## Regras do repositório
 
 - Cada um trabalha só na pasta da sua matéria.
-- Nunca suba senha nem chave de API. Use um arquivo `.env` (veja o `.env.example`), que já está no `.gitignore`.
+- Nunca suba senha nem chave de API; o `.env` já está no `.gitignore`.
 - A entrega oficial de cada matéria é feita no portal da FIAP, no formato que o PDF da matéria pede. Este repositório organiza o trabalho e é o link de entrega da matéria 08.
