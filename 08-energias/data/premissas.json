@@ -1,42 +1,22 @@
-{
-  "periodo_referencia": "1 mês = 30 dias; 1 ano = 365 dias; horizonte de custos = 10 anos",
-  "classe_tarifaria": "B3 - demais classes",
+  "custos": {
+    "total_referencia_rede": 4731.16,
+    "total_referencia_solar": 5708.33,
 
-  "tarifa_enel_sem_tributos_kwh": 0.78938,
-  "tarifa_fonte": "Enel SP, Resolução Homologatória ANEEL 3.596/2026, classe B3 - demais classes, modalidade convencional",
-  "icms": 0.18,
-  "pis_cofins": 0.06,
-  "custo_disponibilidade_kwh_mes": 30,
-  "reajuste_tarifa_aa": 0,
+    "investimento_rede_instalacao": 2500,
+    "investimento_rede_equipamentos": 1000,
+    "investimento_rede_documentacao": 1200,
 
-  "fator_emissao_kg_kwh": 0.0385,
-  "fator_emissao_fonte": "MCTI, média anual do SIN em 2023",
+    "custo_circuito_interno": 800,
 
-  "hsp_projeto": 3.5,
-  "hsp_media_anual": 4.5,
-  "desempenho_global_pr": 0.75,
-  "autonomia_alvo_dias": 1.5,
-  "dod_lifepo4": 0.8,
-  "tensao_bateria_v": 12.8,
-  "painel_wp": 300,
-  "bateria_ah": 100,
+    "custo_painel": 1200,
+    "custo_bateria": 1000,
+    "custo_bateria_por_ah": 10,
+    "custo_controlador_mppt": 500,
+    "custo_bos": 600,
+    "custo_mao_obra_solar": 1000,
+    "documentacao_solar": 400,
 
-  "custo_painel": 1200,
-  "custo_bateria": 1000,
-  "custo_bateria_por_ah": 10,
-  "custo_controlador_mppt": 500,
-  "custo_bos": 600,
-  "custo_mao_obra_solar": 1000,
-  "documentacao_solar": 400,
-  "conta_solar_mensal": 8.33,
-  "manutencao_solar_ano": 1000,
-
-  "custo_rede_instalacao": 2500,
-  "custo_rede_equipamentos": 1000,
-  "custo_rede_documentacao": 1200,
-
-  "custo_circuito_interno": 800,
-
-  "observacao_equipamentos_comuns": "Bomba, lâmpadas, ESP32 e sensor são iguais nas duas alternativas e ficam fora da comparação de custos",
-  "observacao_custos": "Investimento inicial separado dos custos recorrentes. A alternativa solar considera R$ 8,33 mensais de custo residual e R$ 1.000 anuais de manutenção."
-}
+    "conta_rede_mensal": 31.16,
+    "conta_solar_mensal": 8.33,
+    "manutencao_solar_ano": 1000
+  }
