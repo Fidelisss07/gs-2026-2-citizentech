@@ -26,6 +26,40 @@ O projeto propõe a implantação de uma horta comunitária integrada a um ponto
 | Autonomia da bateria | 1,9 dia | 1.280 Wh × 0,8 / 544 Wh/dia |
 
 
+## Como executar o projeto
+### 1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITORIO](https://github.com/Fidelisss07/gs-2026-2-citizentech)
+```
+
+### 2. Entre na pasta do projeto:
+```bash
+cd gs-2026-2-citizentech
+cd 08-energias
+```
+
+### 3. Instale as dependências
+Certifique-se de ter o Python e o pip instalados. Execute o comando abaixo para instalar todas as bibliotecas necessárias:
+```bash
+pip install "streamlit>=1.30" pandas numpy matplotlib
+```
+
+### 4. Executar o projeto
+**Dashboard interativo (Streamlit):**
+```bash
+streamlit run dash/dashboard.py
+```
+
+**Executar os cálculos no terminal:**
+```bash
+python dash/calculos.py
+```
+
+**Gerar ou atualizar as figuras:**
+```bash
+python dash/gerar_figuras.py
+```
+
 ## Estrutura do repositório
 ```
 gs-2026-citizentech/
