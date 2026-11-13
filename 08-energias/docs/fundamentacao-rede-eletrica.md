@@ -1,7 +1,7 @@
 # Alternativa A: ligação à rede da Enel São Paulo (classe B3)
 Os números do projeto vêm de `docs/consumo-energetico.md` e os dados de contexto, das fontes ao final.
 
-## O que a rede resolve na horta
+## Benefícios da rede
 A rede entrega energia contínua sem que a horta precise armazená-la. Não há bateria para dimensionar, trocar ou proteger de furto, e a carga pode crescer sem redimensionamento: a bomba pode ser trocada por uma maior, a iluminação pode aumentar e ferramentas elétricas podem entrar na rotina da compostagem. A carga estimada é de 16,86 kWh por mês, abaixo do mínimo de 30 kWh que a distribuidora fatura numa ligação monofásica, então o sistema inicial sustenta o funcionamento previsto do projeto com ampla folga.
 
 A rede também é um serviço regulado. As regras de prestação do serviço público de distribuição, com direitos e deveres do consumidor, estão na Resolução Normativa ANEEL nº 1.000/2021, e a qualidade do fornecimento é acompanhada pela ANEEL por indicadores de duração e frequência das interrupções, o DEC e o FEC. A tarifa é homologada pela agência e publicada pela distribuidora. Para a classe B3, a Enel São Paulo informa TUSD de R$472,42/MWh e TE de R$316,96/MWh desde 04/07/2026, o que dá R$0,78938/kWh sem tributos. Qualquer pessoa pode conferir esse valor, e o projeto não depende de cotação de fornecedor para o custo da energia.
@@ -14,7 +14,7 @@ O grupo adotou R$2.500 de instalação e R$1000 de circuito até a horta, num to
 A manutenção da rede até a instalação, é de responsabilidade da distribuidora, zerando o custo de manutenção da rede.
 
 
-## Por que a rede é uma boa escolha
+## Justificativa da escolha da rede
 Acessibilidade de instalação, onde já existe rede próxima, a conexão é o caminho mais comum e a mais simples de operar. A infraestrutura é compartilhada por milhões de consumidores, o que dilui o custo da geração e da transmissão, e a escala permite que o sistema elétrico se apoie em fontes diversas, de modo que a falta de sol num dia não interrompe o fornecimento. Se a horta fosse ampliada, ganhasse câmara fria, estufa climatizada ou oficina, a rede seria a opção natural, porque uma carga maior tornaria o custo mensal mínimo irrelevante e inviabilizaria um sistema solar isolado pequeno.
 
 ## Limitações da rede
