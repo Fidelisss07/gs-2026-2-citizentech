@@ -1,0 +1,4 @@
+equipamento,quantidade,potencia_w,horas_dia,observacao
+Bomba de irrigação 12V,1,40,2,o automatismo liga só quando a terra seca
+Placa ESP32 + sensor capacitivo de umidade,1,1,24,Valor conservador: ESP32 com Wi-Fi ligado fica entre 0.5 W e 1 W
+Refletor LED 12 V,2,20,12,Das 18h às 6h; sensor de luminosidade liga ao anoitecer e desliga ao amanhecer
