@@ -15,6 +15,9 @@ Uma horta comunitária localizada na Mooca opera de forma tradicional e colabora
  ## Solução
 O projeto propõe a implantação de uma horta comunitária integrada a um ponto de compostagem, utilizando energia renovável para garantir o funcionamento de atividades essenciais, como irrigação, monitoramento das condições da horta e iluminação noturna. A solução busca automatizar os cuidados com o cultivo, permitindo uma irrigação mais eficiente, o acompanhamento das condições da compostagem e a melhor utilização dos recursos naturais. Além disso, propõe uma gestão energética sustentável, contribuindo para a redução de custos e impactos ambientais. Dessa forma, busca-se promover a autonomia da horta, a produção comunitária de alimentos, a educação ambiental e o envolvimento dos moradores na construção de um espaço público mais sustentável.
 
+![Diagrama conceitual](fig/diagrama_conceitual.jpg)
+*Comparamos essa solução com a ligação à rede da Enel (classe tarifária B3, demais classes) para a mesma carga, em 10 anos.*
+
 
 ## Indicadores usados no dashboard
 | Indicador | Valor | Origem |
@@ -79,4 +82,6 @@ gs-2026-citizentech/
 │   └── comparacao-sensibilidade.md       ← comparação de alternativas (custos, consumo, viabilidade, impacto ambiental, vantagens e limitações) e sensibilidades das alternativas
 │   └── fontes.md       ← fontes de dados e pesquisa para determinação das premissas
 │   └── limitacoes.md       ← limitações identificadas do projeto
+├── fig/
+│   ├── diagrama_conceitual.jpg  ← diagrama conceitual de funcionamento do projeto
 ```
