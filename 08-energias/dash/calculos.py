@@ -1,3 +1,4 @@
+"""
 Todos os números do dashboard vêm daqui. As premissas ficam em data/premissas.json
 e os equipamentos em data/equipamentos.csv.
 """
