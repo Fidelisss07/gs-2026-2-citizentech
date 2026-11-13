@@ -40,6 +40,7 @@ Sendo assim, o projeto sustenta a escolha do solar em custo, autonomia, simplici
 | Item | R$ |
 |---|---|
 | Painel 150 Wp | 1.200,00 |
+| Conta mensal | 8,33 |
 | Controlador MPPT 30 A | 500,00 |
 | Bateria LiFePO4 12,8 V 100Ah | 1.000,00 |
 | Fusíveis, cabos, MC4, suporte, caixa, conversor 12→5 V | 600,00 |
