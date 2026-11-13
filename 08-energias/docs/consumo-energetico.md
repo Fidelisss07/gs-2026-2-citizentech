@@ -8,7 +8,7 @@
 | Bomba de irrigação - 12V | 1 | 40 | 2 | 40 | 1,20 | 16 |
 | ESP32 + sensor capacitivo | 1 | 1 | 24 | 24 | 0,72 | 8,64 |
 | Refletor LED - 12V | 2 | 20 | 12 | 480 | 14,40 | 172,80 |
-| Total | | | | 506 | 16,86 | 204,40 |
+| Total | | | | 506 | 15,18 | 182,16 |
 
 
 ## Justificativa das premissas
