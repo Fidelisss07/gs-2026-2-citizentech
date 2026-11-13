@@ -51,13 +51,13 @@ k[2].metric("Energia renovável atendida", f"{ind['pct_energia_renovavel']:.1f} 
 k[3].metric("CO₂ evitado", f"{ind['co2_evitado_kg_ano']:.1f} kg/ano", help="Consumo anual x fator médio do SIN (MCTI, 2023)")
 k[4].metric("Autonomia da bateria", f"{ind['autonomia_dias']:.1f} dias", help="Capacidade útil (80 %) dividida pelo consumo diário")
 
-st.subheader("1. Consumo estimado, E = (P × t) / 1000")
+st.subheader("Consumo estimado, E = (P × t) / 1000")
 t = tabela.copy()
 t.columns = ["Equipamento", "Qtd", "Potência (W)", "Horas/dia", "Observação", "Wh/dia", "kWh/mês", "kWh/ano"]
 st.dataframe(t[["Equipamento", "Qtd", "Potência (W)", "Horas/dia", "Wh/dia", "kWh/mês", "kWh/ano"]].round(2), hide_index=True, width="stretch")
 st.bar_chart(tabela.set_index("equipamento")["wh_dia"], horizontal=True)
 
-st.subheader("2. Alternativa A (rede da Enel) contra alternativa B (painel solar e bateria)")
+st.subheader("Alternativa A (rede da Enel) contra alternativa B (painel solar e bateria)")
 a, b = st.columns(2)
 with a:
     st.markdown("**A. Rede elétrica**")
@@ -83,7 +83,7 @@ m[2].metric("Retorno de B contra A", "imediato" if pa == 0 else ("sem retorno em
 m[3].metric("Retorno de B contra A2", "sem retorno em 10 anos" if pb is None else f"{pb:.1f} anos",
             help="A2: já existe ponto de energia próximo e só falta o circuito.")
 
-st.subheader("3. Operação simulada (dados sintéticos para demonstrar a automação)")
+st.subheader("Operação simulada (dados sintéticos para demonstrar a automação)")
 s1, s2 = st.columns(2)
 s1.caption("Carga da bateria (%) ao longo de um ano")
 s1.line_chart(sim.set_index("data")["soc_pct"])
@@ -92,14 +92,5 @@ s2.line_chart(sim.set_index("data")["umidade_solo_pct"])
 st.write(f"Bomba: média simulada de {sim['bomba_min'].mean():.1f} min/dia (limite de projeto: {h_bomba*60:.0f} min/dia). "
          f"Energia não atendida: {sim['energia_nao_atendida_wh'].sum():.0f} Wh no ano.")
 
-st.subheader("4. Diagrama da solução")
-img = RAIZ / "figuras" / "diagrama_blocos.png"
-if img.exists():
-    st.image(str(img))
 
-st.subheader("5. Benefícios para a comunidade e limitações")
-st.write("A horta ganha irrigação automática e luz noturna sem depender de ligação à rede, o que dispensa documentos de posse e obra civil. "
-         "O voluntariado passa a regar com dados de umidade em vez de rotina fixa, e o painel serve de material didático.")
-st.write(f"Limitações: o ganho de CO₂ é pequeno ({amb['co2_evitado_kg_ano']:.1f} kg/ano) porque a rede brasileira já é majoritariamente renovável, "
-         "e a fabricação do painel e da bateria não entrou no cálculo. Preços de painel, bateria e padrão de entrada são estimativas de mercado "
-         "que precisam de cotação. A irradiação solar é um perfil estimado a conferir no SunData/CRESESB com as coordenadas da horta.")
+
