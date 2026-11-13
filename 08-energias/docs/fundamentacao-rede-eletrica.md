@@ -29,6 +29,15 @@ O terceiro é a aprovação local. Em 10 de dezembro de 2025, um apagão afetou 
 
 Sendo assim, a rede se justifica quando há ponto de energia próximo, carga maior ou previsão de crescimento. Para a carga atual da horta, ela funciona e é limpa, mas custa mais ao longo de 10 anos e depende de um prestador que desempenha mal serviço de acordo à sua reguladora.
 
+## Custos
+| Item | R$ |
+|---|---|
+| Conta mensal | 31,16 |
+| Instalação | 2.500,00 |
+| Equipamento para instalação | 1.000,00 |
+| Documentação | 1.200,00 |
+| Manutenção | 00,00 |
+| Total | 4.731,16 |
 
 ## Referências
 ANEEL. Resolução Normativa nº 1.000, de 7 de dezembro de 2021. Disponível em: https://www.rge-rs.com.br/sites/rge-rs/files/2022-04/REN%201000_2021.pdf
