@@ -7,8 +7,24 @@ Rafael Meirelles - RM 574897
 Ana - RM 575081
 
 LINKS
-Notebook no Colab: [COLAR O LINK - Compartilhar > "Qualquer pessoa com o link"]
+Notebook no Colab: https://colab.research.google.com/github/Fidelisss07/gs-2026-2-citizentech/blob/main/07-prompt-ia/1_Notebook_GS2026_2.ipynb
 Repositorio: https://github.com/Fidelisss07/gs-2026-2-citizentech/tree/main/07-prompt-ia
 
-TELA FINAL DO NOTEBOOK
-[COLAR AQUI A SAIDA DA ULTIMA CELULA DA SECAO 7, DEPOIS DO RUN ALL NO COLAB]
+TELA FINAL DO NOTEBOOK (ultima celula da Secao 7, Run all no Colab com GPU T4)
+================================================================
+CERTIFICAÇÃO · GS 2026.2 · Prompt and Artificial Intelligence
+Ciclo Verde · Turma 1CCPR · Trio · Frente B (Descarte e sustentabilidade)
+----------------------------------------------------------------
+Gustavo Fidelis de Souza e Silva · RM 574666
+Rafael Meirelles · RM 574897
+Ana · RM 575081
+----------------------------------------------------------------
+Registros no 2_dados_servico.json: 12 (5 com status fora do normal)
+Correções das 4 regras: regra 4 - ids duplicados removidos: 1, regra 1 - status sem motivo corrigidos: 1, regra 2 - acessivel corrigidos: 6, regra 3 - horarios padronizados: 2, regra 3 - horarios que nao entendemos: 0
+Problemas no JSON gravado: 0
+Enriquecimento: 12 registros | fonte llm: 6 | fonte regra: 6 | revisão humana: 5
+Testes: 5 perguntas x 2 versões x 2 rodadas = 20 respostas
+Prompt final: GS2026.2-final | modelo llama3.2:1b (Ollama dentro do Colab) | temperatura 0.1
+Tempo das chamadas ao modelo: 1.6 min
+Executado em: 13/11/2026 00:17:35
+================================================================

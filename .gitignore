@@ -5,3 +5,6 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+
+# Chat log da 07: vai só no ZIP da entrega, nunca no repositório público
+6_Chat_Log.txt

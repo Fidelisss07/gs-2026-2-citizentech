@@ -43,7 +43,7 @@ O assistente responde só com base nos 12 registros do `2_dados_servico.json`. Q
 
 ## Como executar
 
-1. Abra o `1_Notebook_GS2026_2.ipynb` no [Google Colab](https://colab.research.google.com).
+1. Abra o notebook direto no Colab por [este link](https://colab.research.google.com/github/Fidelisss07/gs-2026-2-citizentech/blob/main/07-prompt-ia/1_Notebook_GS2026_2.ipynb), ou faça upload do `1_Notebook_GS2026_2.ipynb` no [Google Colab](https://colab.research.google.com).
 2. (Opcional, bem mais rápido) Em **Ambiente de execução → Alterar o tipo de ambiente de execução**, escolha **GPU T4**.
 3. Clique em **Ambiente de execução → Executar tudo** (Runtime → Run all). A primeira parte instala o Ollama e baixa o modelo, o que leva uns 2 minutos. Na CPU, o notebook inteiro leva cerca de 30 minutos.
 4. O notebook grava o `2_dados_servico.json` na pasta do Colab (ícone de pasta). Baixe o arquivo.
