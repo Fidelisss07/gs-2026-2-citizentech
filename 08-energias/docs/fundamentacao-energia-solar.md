@@ -43,10 +43,10 @@ Sendo assim, o projeto sustenta a escolha do solar em custo, autonomia, simplici
 | Controlador MPPT 30 A | 500,00 |
 | Bateria LiFePO4 12,8 V 100Ah | 1.000,00 |
 | Fusíveis, cabos, MC4, suporte, caixa, conversor 12→5 V | 600,00 |
-| Mão de obra de instalação | 1.500,00 |
-| Manutenção - limpeza e inspeção | 1.000,00 |
-| Documentação | 800,00 |
-| Total | 6.600 |
+| Mão de obra de instalação | 1.000,00 |
+| Manutenção anual - limpeza e inspeção | 1.000,00 |
+| Documentação | 400,00 |
+| Total | 5.700 |
 
 
 ## Referências
