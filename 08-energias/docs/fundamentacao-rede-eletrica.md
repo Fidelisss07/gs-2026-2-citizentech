@@ -1,6 +1,7 @@
 # Alternativa A: ligação à rede da Enel São Paulo (classe B3)
 Os números do projeto vêm de `docs/consumo-energetico.md` e os dados de contexto, das fontes ao final.
 
+
 ## Benefícios da rede
 A rede entrega energia contínua sem que a horta precise armazená-la. Não há bateria para dimensionar, trocar ou proteger de furto, e a carga pode crescer sem redimensionamento: a bomba pode ser trocada por uma maior, a iluminação pode aumentar e ferramentas elétricas podem entrar na rotina da compostagem. A carga estimada é de 16,86 kWh por mês, abaixo do mínimo de 30 kWh que a distribuidora fatura numa ligação monofásica, então o sistema inicial sustenta o funcionamento previsto do projeto com ampla folga.
 
@@ -17,6 +18,7 @@ A manutenção da rede até a instalação, é de responsabilidade da distribuid
 ## Justificativa da escolha da rede
 Acessibilidade de instalação, onde já existe rede próxima, a conexão é o caminho mais comum e a mais simples de operar. A infraestrutura é compartilhada por milhões de consumidores, o que dilui o custo da geração e da transmissão, e a escala permite que o sistema elétrico se apoie em fontes diversas, de modo que a falta de sol num dia não interrompe o fornecimento. Se a horta fosse ampliada, ganhasse câmara fria, estufa climatizada ou oficina, a rede seria a opção natural, porque uma carga maior tornaria o custo mensal mínimo irrelevante e inviabilizaria um sistema solar isolado pequeno.
 
+
 ## Limitações da rede
 O primeiro problema é de custo fixo. A distribuidora cobra o mínimo de 30 kWh por mês numa ligação monofásica, o que dá R$31,16 com tributos por um consumo de 16,86 kWh. Em 10 anos, o gasto estimado é de R$7.239,20 (conta mensal + custo de instalação), ou cerca de R$1,84 por kWh efetivamente consumido, quase 2,5 vezes mais que o valor base de cobrança.
 É um cálculo ilustrativo, sem desconto no tempo e sem troca de bateria. Para uma carga pequena, a conta mínima pesa mais do que a energia usada, e economizar energia na horta não reduz o valor pago.
@@ -27,8 +29,8 @@ O terceiro é a aprovação local. Em 10 de dezembro de 2025, um apagão afetou 
 
 Sendo assim, a rede se justifica quando há ponto de energia próximo, carga maior ou previsão de crescimento. Para a carga atual da horta, ela funciona e é limpa, mas custa mais ao longo de 10 anos e depende de um prestador que desempenha mal serviço de acordo à sua reguladora.
 
-## Referências
 
+## Referências
 ANEEL. Resolução Normativa nº 1.000, de 7 de dezembro de 2021. Disponível em: https://www.rge-rs.com.br/sites/rge-rs/files/2022-04/REN%201000_2021.pdf
 
 CANAL SOLAR. Justiça mantém multa da ANEEL à Enel (apagão de 10/12/2025). Abril de 2026. Disponível em: https://canalsolar.com.br/en/court-upholds-fine-from-Aneel-%28Brazilian-Electricity-Regulatory-Agency%29-and-Enel-%28Brazilian-Electricity-Regulatory-Agency/
