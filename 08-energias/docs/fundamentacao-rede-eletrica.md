@@ -20,8 +20,8 @@ Acessibilidade de instalação, onde já existe rede próxima, a conexão é o c
 
 
 ## Limitações da rede
-O primeiro problema é de custo fixo. A distribuidora cobra o mínimo de 30 kWh por mês numa ligação monofásica, o que dá R$31,16 com tributos por um consumo de 17,52 kWh. Em 10 anos, o gasto estimado é de R$7.239,20 (conta mensal + custo de instalação), ou cerca de R$3,44 por kWh efetivamente consumido (7.239,20/17,52*120), 5 vezes mais que o valor base de cobrança.
-É um cálculo ilustrativo, sem desconto no tempo e sem troca de bateria. Para uma carga pequena, a conta mínima pesa mais do que a energia usada, e economizar energia na horta não reduz o valor pago.
+O primeiro problema é de custo fixo. A distribuidora cobra o mínimo de 30 kWh por mês numa ligação monofásica, o que dá R$31,16 com tributos por um consumo de 17,52 kWh. Em 10 anos, o gasto estimado é de R$8.439,20 (conta mensal + custo de instalação), ou cerca de R$4,01 por kWh efetivamente consumido (8.439,20/17,52*120), 4 vezes mais que o valor base de cobrança.
+*Cálculo ilustrativo do grupo.*
 
 O segundo problema é a incerteza da tarifa. O efeito médio dos reajustes anuais da Enel São Paulo foi de −2,24% em 2023, −2,43% em 2024, 13,94% em 2025 e 10,18% em 2026. O planejamento de longo prazo precisa tratar o custo da rede como variável.
 
