@@ -3,11 +3,11 @@ Este texto justifica a escolha da fonte renovável da alternativa A. Os números
 
 
 ## Benefícios da energia
-A energia solar atende a demanda de 16,86 kWh por mês para uma bomba, um sensor e duas luminárias no próprio local, sem estender rede, sem solicitar ligação e sem combustível. O Manual de Engenharia para Sistemas Fotovoltaicos do CEPEL/CRESESB apresenta a tecnologia justamente como opção para levar energia a quem a rede não atende e para manter uma matriz elétrica apoiada em fontes renováveis. Um painel de 150 Wp com bateria de 100 Ah cobre a carga mesmo no mês de menor insolação, com folga de cerca de 20% na geração.
+A energia solar atende a demanda de 15,18 kWh por mês para uma bomba, um sensor e duas luminárias no próprio local, sem estender rede, sem solicitar ligação e sem combustível. O Manual de Engenharia para Sistemas Fotovoltaicos do CEPEL/CRESESB apresenta a tecnologia justamente como opção para levar energia a quem a rede não atende e para manter uma matriz elétrica apoiada em fontes renováveis. Um painel de 150 Wp com bateria de 100 Ah cobre a carga mesmo no mês de menor insolação, com folga de cerca de 20% na geração.
 
 Esse arranjo muda a rotina do espaço. A bomba passa a ligar quando o sensor indica terra seca, e a rega deixa de depender de alguém estar presente. As luminárias permitem uso da horta à noite. Como o sistema opera em 12V de corrente contínua, o risco elétrico para voluntários é menor do que numa instalação de 127V ou 220V, e não há ruído nem emissão local, o que combina com um espaço de cultivo e compostagem.
 
-A escolha é assertiva financeiramente. Ao invés de pagar R$7.239,20 em 10 anos, o gasto estimado na rede solar é de R$3.660. Dividindo pelos 2.023,20 kWh (16,86 * 120) efetivamente consumidos, o custo médio fica em torno de R$1,84 por kWh na rede e R$ 3,30 por kWh no solar.
+A escolha é assertiva financeiramente. Ao invés de pagar R$7.239,20 em 10 anos, o gasto estimado na rede solar é de R$3.660. Dividindo pelos 1.821,60 kWh (15,18 * 120) efetivamente consumidos, o custo médio fica em torno de R$3,97 por kWh na rede e R$ 2,00 por kWh no solar.
 *Cálculo ilustrativo do grupo, sem desconto de valor no tempo e sem troca de bateria.*
 
 
