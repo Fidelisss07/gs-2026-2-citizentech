@@ -1,5 +1,5 @@
 # Alternativa A: ligação à rede da Enel São Paulo (classe B3)
-Os números do projeto vêm de `docs/consumo-energetico.md` e os dados de contexto, das fontes ao final.
+Este texto justifica a escolha da fonte renovável da alternativa A. Os números do projeto vêm de `docs/consumo-energetico.md`. Os dados de contexto (custos globais, matriz brasileira, emissões) estão nas fontes listadas ao final.
 
 
 ## Benefícios da rede
@@ -20,10 +20,10 @@ Acessibilidade de instalação, onde já existe rede próxima, a conexão é o c
 
 
 ## Limitações da rede
-O primeiro problema é de custo fixo. A distribuidora cobra o mínimo de 30 kWh por mês numa ligação monofásica, o que dá R$31,16 com tributos por um consumo de 15,18 kWh. Em 10 anos, o gasto estimado é de R$7.239,20 (conta mensal + custo de instalação), ou cerca de R$3,97 por kWh efetivamente consumido (7.239,20/15,18*120), 5 vezes mais que o valor base de cobrança.
+O primeiro problema é de custo fixo. A distribuidora cobra o mínimo de 30 kWh por mês numa ligação monofásica, o que dá R$31,16 com tributos por um consumo de 17,52 kWh. Em 10 anos, o gasto estimado é de R$7.239,20 (conta mensal + custo de instalação), ou cerca de R$3,44 por kWh efetivamente consumido (7.239,20/17,52*120), 5 vezes mais que o valor base de cobrança.
 É um cálculo ilustrativo, sem desconto no tempo e sem troca de bateria. Para uma carga pequena, a conta mínima pesa mais do que a energia usada, e economizar energia na horta não reduz o valor pago.
 
-O segundo problema é a incerteza da tarifa. O efeito médio dos reajustes anuais da Enel São Paulo foi de −2,24 % em 2023, −2,43 % em 2024, 13,94 % em 2025 e 10,18 % em 2026. O planejamento de longo prazo precisa tratar o custo da rede como variável.
+O segundo problema é a incerteza da tarifa. O efeito médio dos reajustes anuais da Enel São Paulo foi de −2,24% em 2023, −2,43% em 2024, 13,94% em 2025 e 10,18% em 2026. O planejamento de longo prazo precisa tratar o custo da rede como variável.
 
 O terceiro é a aprovação local. Em 10 de dezembro de 2025, um apagão afetou cerca de 4,4 milhões de clientes na capital paulista, e a ANEEL concluiu que o desempenho da Enel nesse episódio foi insatisfatório. Entretanto, apagões no Estado de São Paulo tem se tornado cada vez mais comuns, advindos de diversos fatores: eventos climáticos extremos, infraestrutura elétrica envelhecida, falta de manejo arbóreo e falhas operacionais das concessionárias. Fato é, essas quedas são atribuídas à distribuidora ENEL, que atualmente está na posição 30ª entre as 33 grandes distribuidoras do país, segundo o relatório técnico da ANEEL de de abril de 2026. 
 
