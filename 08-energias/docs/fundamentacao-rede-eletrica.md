@@ -39,6 +39,7 @@ Sendo assim, a rede se justifica quando há ponto de energia próximo, carga mai
 | Manutenção | 00,00 |
 | Total | 4.731,16 |
 
+
 ## Referências
 ANEEL. Resolução Normativa nº 1.000, de 7 de dezembro de 2021. Disponível em: https://www.rge-rs.com.br/sites/rge-rs/files/2022-04/REN%201000_2021.pdf
 
