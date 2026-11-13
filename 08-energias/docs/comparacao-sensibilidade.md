@@ -15,7 +15,7 @@
 | Critério | A. Rede | B. Solar + bateria |
 |---|---|---|
 | Consumo | 17,52 kWh/mês (30 kWh faturados) | 17,52 kWh/mês, gerados no local |
-| Instalação | R$4.700,00 | R$5.700,00 |
+| Instalação | R$4.731,16 | R$5.708,33 |
 | Custo mensal | R$31,16 | R$8,33 |
 | Custo em 10 anos | R$8.439,20 | R$6.699,60 |
 | Viabilidade | Exige solicitação, vistoria e documentação da Enel; prazo da distribuidora | Instalação em um dia, sem burocracia com a Enel |
