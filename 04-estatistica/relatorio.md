@@ -279,12 +279,16 @@ A tabela da Prefeitura também mostra, desde 2013, quanto lixo sai da varrição
 
 ## 9. Uso de IA
 
-- **Claude Code (Anthropic):** procurou e baixou as fontes oficiais, montou a base `.xlsx` e escreveu o rascunho do código e deste relatório.
-- **Decisões:** foram do Fidelis, com a ajuda do Claude (chat) para conferir as contas principais. Ele escolheu a variável discreta entre as opções encontradas e aprovou:
+De onde veio cada ideia (o Claude Code e o Claude (chat) são da Anthropic):
+- **O que o Claude Code fez:** procurou e baixou as fontes oficiais, montou a base `.xlsx` e escreveu o rascunho do código e deste relatório.
+- **Sugerido pelo Claude Code e pelo Claude (chat), aprovado pelo Fidelis:** as opções de variável discreta e a escolhida (ecopontos por subprefeitura), a base em um `.xlsx` com 3 abas e as URLs com a data da consulta nas referências.
+- **Proposto pelo Claude Code, conferido pelo Claude (chat) e aprovado pelo Fidelis:**
   - deixar o Ecoponto Têxtil fora da contagem;
   - manter o resultado contrário do achado extra, com as ressalvas;
   - calcular a coleta seletiva sobre o lixo domiciliar.
-- **Conferência fora do programa:** a média dos ecopontos (131 ÷ 31), a variância, a regra de Sturges, os quartis, as modas de Czuber e as contagens das classes.
+- **Proposto pelo Claude Code, aprovado pelo Fidelis:** os padrões de cálculo (anos de 2000 a 2025, variância com n − 1, regra de Sturges) e os gráficos de linha e de barras.
+- **Sugerido pelo Claude (chat), aprovado pelo Fidelis:** marcar a mudança de 2006 no gráfico de linha e abrir o relatório com o resumo dos 3 achados.
+- **Conferência fora do programa, feita pelo Claude Code e pelo Claude (chat):** a média dos ecopontos (131 ÷ 31), a variância, a regra de Sturges, os quartis, as modas de Czuber e as contagens das classes.
 
 ## Referências
 
@@ -294,6 +298,6 @@ A tabela da Prefeitura também mostra, desde 2013, quanto lixo sai da varrição
 - FOLHA VP. SUB-MO: mobilização contra o descarte ilegal de entulho e lixo. **Folha VP**, 24 jul. 2026. Disponível em: https://folhavponline.com.br/acontece-na-regiao/sub-mo-faz-mobilizacao-contra-o-descarte-irregular-de-entulho-e-lixo/. Acesso em: 13 nov. 2026.
 - PREFEITURA DE SÃO PAULO. **Coleta de resíduos segundo origem: Município de São Paulo, 1980, 1991, 2000 a 2025**. Fonte: AMLURB e SP Regula; elaboração SMUL/Geoinfo. Disponível em: https://prefeitura.sp.gov.br/documents/d/licenciamento/coleta-de-lixo-segundo-origem_2025. Acesso em: 13 nov. 2026.
 - PREFEITURA DE SÃO PAULO. Secretaria Municipal das Subprefeituras. **Ecoponto: Estação de Entrega Voluntária de Inservíveis**. Disponível em: https://prefeitura.sp.gov.br/web/subprefeituras/w/ecoponto-esta%C3%A7%C3%A3o-de-entrega-volunt%C3%A1ria-de-inserv%C3%ADveis. Acesso em: 13 nov. 2026.
-- PREFEITURA DE SÃO PAULO. Portal de Dados Abertos. **Localização dos Ecopontos distribuídos pelas Subprefeituras** (consultado e não usado, por estar incompleto). Disponível em: https://dados.prefeitura.sp.gov.br/dataset/localizacao-dos-ecopontos-distribuidos-pelas-subprefeituras. Acesso em: 13 nov. 2026.
+- PREFEITURA DE SÃO PAULO. Portal de Dados Abertos. **Localização dos Ecopontos distribuídos pelas Subprefeituras** (incompleto; não usado). Disponível em: https://dados.prefeitura.sp.gov.br/dataset/localizacao-dos-ecopontos-distribuidos-pelas-subprefeituras. Acesso em: 13 nov. 2026.
 
 </div>

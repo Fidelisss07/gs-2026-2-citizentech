@@ -56,4 +56,4 @@ Os endereços completos e a data da consulta estão na aba `identificacao_e_font
 
 ## Uso de IA
 
-O Claude Code (Anthropic) ajudou a procurar as fontes, montar a base e escrever o rascunho do código e do relatório. As decisões foram do Fidelis e estão no próprio relatório (seção 9).
+O Claude Code (Anthropic) procurou as fontes, montou a base e escreveu o rascunho do código e do relatório. As opções e decisões foram sugeridas pelo Claude Code e pelo Claude (chat) e aprovadas pelo Fidelis. A seção 9 do relatório diz de onde veio cada ideia.
