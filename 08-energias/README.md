@@ -16,6 +16,16 @@ Uma horta comunitária localizada na Mooca opera de forma tradicional e colabora
 O projeto propõe a implantação de uma horta comunitária integrada a um ponto de compostagem, utilizando energia renovável para garantir o funcionamento de atividades essenciais, como irrigação, monitoramento das condições da horta e iluminação noturna. A solução busca automatizar os cuidados com o cultivo, permitindo uma irrigação mais eficiente, o acompanhamento das condições da compostagem e a melhor utilização dos recursos naturais. Além disso, propõe uma gestão energética sustentável, contribuindo para a redução de custos e impactos ambientais. Dessa forma, busca-se promover a autonomia da horta, a produção comunitária de alimentos, a educação ambiental e o envolvimento dos moradores na construção de um espaço público mais sustentável.
 
 
+## Indicadores usados no dashboard
+| Indicador | Valor | Origem |
+|---|---|---|
+| Consumo | 17,52 kWh/mês | Seção 1 |
+| Economia estimada | R$ 22,83/mês | Seção 5 |
+| Energia renovável atendida | 100 % | Simulação anual de 365 dias, sem dia de falta de energia |
+| CO₂ evitado | 7,6 kg/ano | 198,56 kWh × 0,0385 kg/kWh (MCTI, média anual do SIN em 2023). Com os fatores mensais de 2025 (0,0215 a 0,0289 t/MWh), fica entre 4,3 e 5,7 kg/ano |
+| Autonomia da bateria | 1,9 dia | 1.280 Wh × 0,8 / 544 Wh/dia |
+
+
 ## Estrutura do repositório
 ```
 gs-2026-citizentech/
