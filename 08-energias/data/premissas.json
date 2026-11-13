@@ -1,19 +1,19 @@
 {
-  "periodo_referencia": "1 mês = 30 dias; 1 ano = 365 dias; horizonte de custos = 10 anos",
-  "total_referencia_rede": 4731.16,
-  "total_referencia_solar": 5708.33,
-  
+  "_comment_tarifas": "Tarifas e tributos",
+  "periodo_referencia": "1 mês = 30 dias para estimativa de consumo; 1 ano = 365 dias; horizonte financeiro = 10 anos",
   "classe_tarifaria": "B3 - demais classes",
   "tarifa_enel_sem_tributos_kwh": 0.78938,
-  "tarifa_fonte": "Enel SP, Resolução Homologatória ANEEL 3.596/2026, classe B3 - demais classes, modalidade convencional",
+  "tarifa_fonte": "Enel SP, Resolução Homologatória ANEEL 3.596/2026, classe B3 - demais classes, modalidade convencional. TUSD 472,42 + TE 316,96 R$/MWh.",
   "icms": 0.18,
   "pis_cofins": 0.06,
   "custo_disponibilidade_kwh_mes": 30,
   "reajuste_tarifa_aa": 0,
 
+  "_comment_emissoes": "Parâmetros de emissões",
   "fator_emissao_kg_kwh": 0.0385,
-  "fator_emissao_fonte": "MCTI, média anual do SIN em 2023",
+  "fator_emissao_fonte": "MCTI, média anual do SIN em 2023: 0,0385 tCO2/MWh.",
 
+  "_comment_solar": "Parâmetros técnicos do sistema solar",
   "hsp_projeto": 3.5,
   "hsp_media_anual": 4.5,
   "desempenho_global_pr": 0.75,
@@ -23,6 +23,13 @@
   "painel_wp": 300,
   "bateria_ah": 100,
 
+  "_comment_custos_rede": "Investimento de implementação da alternativa de rede elétrica",
+  "investimento_rede_instalacao": 2500,
+  "investimento_rede_equipamentos": 1000,
+  "investimento_rede_documentacao": 1200,
+  "custo_circuito_interno": 800,
+
+  "_comment_custos_solar": "Investimento de implementação da alternativa solar",
   "custo_painel": 1200,
   "custo_bateria": 1000,
   "custo_bateria_por_ah": 10,
@@ -30,16 +37,14 @@
   "custo_bos": 600,
   "custo_mao_obra_solar": 1000,
   "documentacao_solar": 400,
-  
-  "conta_rede_mensal": 31.16,
+
+  "_comment_operacao": "Contas mensais e custos recorrentes",
   "conta_solar_mensal": 8.33,
-  "manutencao_solar_ano": 1000
+  "manutencao_solar_ano": 1000,
 
-  "investimento_rede_instalacao": 2500,
-  "investimento_rede_equipamentos": 1000,
-  "investimento_rede_documentacao": 1200,
-  "custo_circuito_interno": 800,
+  "_comment_referencias": "Totais consolidados de referência para apresentação. Não são somados novamente ao custo acumulado em 10 anos.",
+  "total_referencia_rede": 4731.16,
+  "total_referencia_solar": 5708.33,
 
-  "observacao_equipamentos_comuns": "Bomba, lâmpadas, ESP32 e sensor são iguais nas duas alternativas e ficam fora da comparação de custos",
-  "observacao_custos": "Investimento inicial separado dos custos recorrentes. A alternativa solar considera R$ 8,33 mensais de custo residual e R$ 1.000 anuais de manutenção."
+  "observacao_equipamentos_comuns": "Bomba, lâmpadas, ESP32 e sensor são iguais nas duas alternativas e ficam fora da comparação dos investimentos de implementação."
 }
