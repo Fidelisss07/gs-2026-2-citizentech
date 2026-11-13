@@ -19,7 +19,7 @@ No Brasil, a fonte já faz parte do planejamento. O Balanço Energético Naciona
 O solar também dá autonomia. Com bateria, a irrigação continua durante uma queda da rede, e a comunidade deixa de depender da distribuidora, de documentação de ligação e de reajuste tarifário. O projeto se liga ao Objetivo de Desenvolvimento Sustentável 7, energia limpa e acessível, da Agenda 2030 da ONU.
 
 
-##Limitações da energia
+## Limitações da energia
 O ganho climático deste projeto é pequeno. O fator médio da rede brasileira foi de 0,0385 tCO₂/MWh em 2023, então a horta emitiria cerca de 4,3kg de CO₂ por ano na rede. A fonte solar tem emissões de ciclo de vida, que vêm sobretudo da fabricação: o IPCC aponta mediana de 41 gCO₂eq/kWh para solar em telhado e 48 gCO₂eq/kWh para usinas solares, contra 820 do carvão e 490 do gás natural.
 Aplicadas aos 204,40 kWh anuais, essas medianas dão entre 8,38 e 9,81kg por ano, e a bateria não está nesses números.
 A vantagem climática do solar aparece quando ele substitui geração fóssil, e no Brasil isso depende do momento: a geração termelétrica cresceu 12,3% em 2025, para 169,9 TWh.
