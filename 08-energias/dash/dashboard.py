@@ -1,3 +1,4 @@
+"""
 Rodar: streamlit run dash/dashboard.py
 Os números vêm de calculos.py (premissas em data/premissas.json).
 Os sliders da barra lateral permitem testar premissas e ver os indicadores mudarem.
