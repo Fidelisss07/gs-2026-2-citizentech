@@ -28,6 +28,20 @@ A produção cai no inverno e em sequências de dias nublados, e por isso o sist
 
 Sendo assim, o projeto sustenta a escolha do solar em custo, autonomia, simplicidade de implantação e valor educativo, e trata o benefício de CO₂ como pequeno e dependente de premissas.
 
+
+## Custos
+| Item | R$ |
+|---|---|
+| Painel 150 Wp | 600,00 |
+| Controlador MPPT 30 A | 500,00 |
+| Bateria LiFePO4 12,8 V 100Ah | 1.000,00 |
+| Fusíveis, cabos, MC4, suporte, caixa, conversor 12→5 V | 600,00 |
+| Mão de obra de instalação | 1.500,00 |
+| Manutenção - limpeza e inspeção | 1.000,00 |
+| Documentação | 800,00 |
+| Total | 6.000 |
+
+
 ## Referências
 ANEEL. Resolução Normativa nº 1.000, de 7 de dezembro de 2021. Disponível em: https://www.rge-rs.com.br/sites/rge-rs/files/2022-04/REN%201000_2021.pdf
 
