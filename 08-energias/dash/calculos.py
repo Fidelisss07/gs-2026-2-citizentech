@@ -63,48 +63,27 @@ def dimensionar_solar(wh_dia, p):
     }
 
 
-def comparar(p, c):
-    """
-    Compara os custos da alternativa A (rede elétrica)
-    e da alternativa B (solar + bateria).
 
-    Separa:
-    - Investimento inicial (CAPEX);
-    - Custos recorrentes mensais;
-    - Manutenção anual;
-    - Custo total acumulado em 10 anos.
-    """
+def comparar(p, c):
+    """Compara investimento e custos operacionais das alternativas."""
 
     tarifa = tarifa_com_tributos(p)
 
-    # CUSTOS MENSAIS
     kwh_faturado = max(
         c["kwh_mes"],
         p["custo_disponibilidade_kwh_mes"]
     )
 
-    conta_rede_mes = kwh_faturado * tarifa
+    conta_mes = kwh_faturado * tarifa
 
-    conta_solar_mes = p["conta_solar_mensal"]
-
-    manutencao_solar_ano = p["manutencao_solar_ano"]
-
-    manutencao_solar_mes = manutencao_solar_ano / 12
-
-    custo_recorrente_b_mes = (
-        conta_solar_mes + manutencao_solar_mes
-    )
-
-    economia_mes = conta_rede_mes - custo_recorrente_b_mes
-
-    # INVESTIMENTO INICIAL
+    # Investimento inicial de implementação
     capex_a = (
-        p["custo_rede_instalacao"]
-        + p["custo_rede_equipamentos"]
-        + p["custo_rede_documentacao"]
+        p["investimento_rede_instalacao"]
+        + p["investimento_rede_equipamentos"]
+        + p["investimento_rede_documentacao"]
     )
 
-    # Cenário alternativo: já existe ponto de energia próximo - mantém o custo de circuito interno da premissa anterior
+    # Cenário alternativo: já existe ponto de energia próximo
     capex_a_extensao = p["custo_circuito_interno"]
 
     capex_b = (
@@ -116,46 +95,85 @@ def comparar(p, c):
         + p["documentacao_solar"]
     )
 
-    # CUSTOS ACUMULADOS EM 10 ANOS
+    # Contas e manutenção
+    conta_solar_mes = p["conta_solar_mensal"]
+    manutencao_solar_ano = p["manutencao_solar_ano"]
+
+    # Horizonte de análise
     anos = np.arange(0, ANOS + 1)
+    g = p["reajuste_tarifa_aa"]
 
-    reajuste = p["reajuste_tarifa_aa"]
+    conta_ano = [
+        conta_mes * 12 * (1 + g) ** (a - 1) if a > 0 else 0
+        for a in anos
+    ]
 
-    acum_a = [capex_a]
-    acum_a2 = [capex_a_extensao]
-    acum_b = [capex_b]
+    operacao_solar_ano = [
+        (conta_solar_mes * 12 * (1 + g) ** (a - 1)
+         + manutencao_solar_ano) if a > 0 else 0
+        for a in anos
+    ]
 
-    for ano in range(1, ANOS + 1):
+    # Custos acumulados: implementação + operação
+    acum_a = capex_a + np.cumsum(conta_ano)
+    acum_a2 = capex_a_extensao + np.cumsum(conta_ano)
+    acum_b = capex_b + np.cumsum(operacao_solar_ano)
 
-        # Conta da rede elétrica, com reajuste anual.
-        conta_rede_anual = (
-            conta_rede_mes * 12 * (1 + reajuste) ** (ano - 1)
-        )
+    def interpolar_cruzamento(a, serie_a, serie_b):
+        d0 = serie_b[a - 1] - serie_a[a - 1]
+        d1 = serie_b[a] - serie_a[a]
 
-        # Custos recorrentes da alternativa solar.
-        conta_solar_anual = conta_solar_mes * 12
-        manutencao_anual = manutencao_solar_ano
+        if d1 == d0:
+            return float(a)
 
-        acum_a.append(
-            acum_a[-1] + conta_rede_anual
-        )
+        return (a - 1) + (-d0) / (d1 - d0)
 
-        acum_a2.append(
-            acum_a2[-1] + conta_rede_anual
-        )
+    def cruzamento(serie_a, serie_b):
+        for a in anos:
+            if serie_b[a] <= serie_a[a]:
+                if a == 0:
+                    return 0.0
+                return interpolar_cruzamento(a, serie_a, serie_b)
 
-        acum_b.append(
-            acum_b[-1]
-            + conta_solar_anual
-            + manutencao_anual
-        )
+        return None
 
-    acum_a = np.array(acum_a)
-    acum_a2 = np.array(acum_a2)
-    acum_b = np.array(acum_b)
+    payback_a = cruzamento(acum_a, acum_b)
+    payback_a2 = cruzamento(acum_a2, acum_b)
 
-    # CÁLCULO DO PAYBACK
+    return {
+        "tarifa_com_tributos": tarifa,
+        "kwh_faturado_mes": kwh_faturado,
+        "conta_mes": conta_mes,
+        "conta_solar_mes": conta_solar_mes,
 
+        "capex_a": capex_a,
+        "capex_a_extensao": capex_a_extensao,
+        "capex_b": capex_b,
+
+        "total_referencia_a": p["total_referencia_rede"],
+        "total_referencia_b": p["total_referencia_solar"],
+
+        "manutencao_b_ano": manutencao_solar_ano,
+        "manutencao_b_mes": manutencao_solar_ano / 12,
+
+        "om_b_mes": manutencao_solar_ano / 12,
+        "economia_mes": (
+            conta_mes - conta_solar_mes - manutencao_solar_ano / 12
+        ),
+
+        "anos": anos,
+        "acum_a": acum_a,
+        "acum_a_extensao": acum_a2,
+        "acum_b": acum_b,
+
+        "tco_a": float(acum_a[-1]),
+        "tco_a_extensao": float(acum_a2[-1]),
+        "tco_b": float(acum_b[-1]),
+
+        "payback_a_anos": payback_a,
+        "payback_a_extensao_anos": payback_a2,
+    }
+    
     def cruzamento(serie_a, serie_b):
 
         for ano in anos:
