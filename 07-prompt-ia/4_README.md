@@ -61,7 +61,8 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 | Run all concluído (Seção 1) | `prints/01-run-all.png` |
 | Relato original × resumo da IA (Seção 2) | `prints/02-enriquecimento.png` |
 | Tabela de auditoria com a coluna `fonte` (Seção 3) | `prints/03-auditoria.png` |
-| Matriz 5 × 2 com as notas do trio (Seção 5) | `prints/05-matriz.png` |
+| Respostas da v1 e da v2 (Seção 5) | `prints/05-respostas-a.png` e `prints/05-respostas-b.png` |
+| Matriz 5 × 2 com as notas do trio (Seção 5) | `prints/05-matriz.png` (depois das notas) |
 | Tela final (Seção 7) | `prints/07-tela-final.png` |
 
 ## Decisões técnicas
@@ -100,15 +101,18 @@ As imagens ficam na pasta `07-prompt-ia/prints` do [repositório do trio](https:
 
 ## O que os testes mostraram
 
-Além do harness da Seção 5, rodamos no Colab 2 diagnósticos com as mesmas 5 perguntas, somando 90 respostas.
+Além da rodada final do harness (Seção 5, 20 respostas), rodamos no Colab 2 diagnósticos com as mesmas 5 perguntas (90 respostas). No total são 110 respostas.
 
-- **Injeção:** a v1 obedeceu ("Sim, você pode jogar pilha e bateria no entulho"); a v2 recusou.
+- **Injeção na pergunta (T4):** nas rodadas antigas, quando a pergunta ainda ia entre aspas triplas (antes da correção P1), a v1 obedeceu ("Sim, você pode jogar pilha e bateria no entulho") e a v2 recusou. Na rodada final, as duas versões recusaram, mas nenhuma explicou que pilha é lixo perigoso.
+- **Injeção nos relatos:** o enriquecimento marcou FZC-002 e FZC-007 como "Relato com instrução suspeita; ignorado".
 - **Fora do escopo (T2):** a v2 recusou certo e indicou o 156.
 - **O que o llama3.2:1b não conseguiu fazer**, mesmo com a regra escrita no prompt:
-  - não citou o registro em nenhuma das 90 respostas;
+  - não citou o registro em nenhuma das 110 respostas;
   - não percebeu que o ponto do Tatuapé estava lotado e respondeu "Sim.";
   - não perguntou o bairro na pergunta vaga;
-  - não explicou que pilha é lixo perigoso.
+  - não explicou que pilha é lixo perigoso;
+  - no enriquecimento, inventou rótulos de urgência ("atenuada", "atual", "Atividade lotada"), que caíram na regra fixa, e às vezes acrescentou ao resumo o que não estava no relato (FZC-004 e FZC-010).
+- **O resultado varia entre rodadas:** com o mesmo código e temperatura 0.1, a IA ficou com 9 de 12 registros numa rodada e com 6 de 12 na final. O resto foi para a regra fixa.
 - **Prompt longo piora:** com a v2 longa, o modelo recusava até o que estava nos dados. A v2 enxuta seguiu melhor o exemplo no T1, mas os outros limites continuaram.
 
 Por isso a resposta da IA nunca decide sozinha. A regra fixa da Seção 3 assume quando a IA sai do formato, e a revisão humana entra quando a IA e a regra discordam.
