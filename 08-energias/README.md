@@ -31,6 +31,13 @@ O projeto propõe a implantação de uma horta comunitária integrada a um ponto
 gs-2026-citizentech/
 08-energias/
 ├── README.md                  ← este documento
+├── dash/
+│   ├── calculos.py  ← todas as formulas de calculos
+│   ├── dashboard.py  ← dashboard que copia as premissas do JSON, sobrescreve e chama tudo com os valores novos.
+│   ├── gerar-figuras.py  ← gera imagens a partir dos valores do dashboard
+├── data/
+│   ├── equipamentos.csv  ← armazenamento de todos os dados dos equipamentos
+│   ├── premissas.json  ← armazenamento de todos os dados que não são equipamentos
 ├── docs/
 │   ├── consumo-energetico.md  ← cálculos e justificativas do consumo energético
 │   └── fundamentacao-rede-eletrica.md       ← fundamentação teórica com cálculos, benefícios, justificativas, limitações e referências
