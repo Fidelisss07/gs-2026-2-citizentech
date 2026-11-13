@@ -29,7 +29,7 @@ O projeto propõe a implantação de uma horta comunitária integrada a um ponto
 ## Como executar o projeto
 ### 1. Clone o repositório:
 ```bash
-git clone https://github.com/Fidelisss07/gs-2026-2-citizentech
+git clone https://github.com/Fidelisss07/gs-2026-2-citizentech.git
 ```
 
 ### 2. Entre na pasta do projeto:
