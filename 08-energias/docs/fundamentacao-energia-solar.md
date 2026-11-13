@@ -1,13 +1,20 @@
 # Alternativa B: energia solar fotovoltaica 
 Este texto justifica a escolha da fonte renovável da alternativa A. Os números do projeto vêm de `docs/consumo-energetico.md`. Os dados de contexto (custos globais, matriz brasileira, emissões) estão nas fontes listadas ao final.
 
+## Dimensionamento solar
+- Parâmetros: HSP de projeto 3,5 kWh/m²·dia (mês mais fraco do inverno paulistano, com folga para sombra de prédios vizinhos), desempenho global PR = 0,75, bateria LiFePO4 com profundidade de descarga de 80 % e autonomia alvo de 1,5 dia.
+- Potência mínima do painel: P = 544 / (3,5 × 0,75) = 207,2 Wp. Adotado: 2 módulos de 150 Wp (300 Wp).
+- Energia gerada: em média anual (HSP 4,5) o painel entrega 300 × 4,5 × 0,75 = 1.012,5 Wh/dia; no pior mês, 300 × 3,5 × 0,75 = 787,5 Wh/dia, 30% acima do consumo.
+- Capacidade mínima da bateria: 544 × 1,5 / 0,8 = 1.020 Wh, ou 79,7 Ah a 12,8 V. Adotada: 12,8 V, 100 Ah (1.280 Wh), que dá 1.280 × 0,8 / 544 = 1,88 dia de autonomia com 80 % de descarga.
+- Controlador: a corrente de 300 Wp em 12,8 V chega a cerca de 23,4 A. Adotado MPPT de 40 A, com folga.
+
 
 ## Benefícios da energia
 A energia solar atende a demanda de 17,52 kWh por mês para uma bomba, um sensor e duas luminárias no próprio local, sem estender rede, sem solicitar ligação e sem combustível. O Manual de Engenharia para Sistemas Fotovoltaicos do CEPEL/CRESESB apresenta a tecnologia justamente como opção para levar energia a quem a rede não atende e para manter uma matriz elétrica apoiada em fontes renováveis. Um painel de 150 Wp com bateria de 100 Ah cobre a carga mesmo no mês de menor insolação, com folga de cerca de 20% na geração.
 
 Esse arranjo muda a rotina do espaço. A bomba passa a ligar quando o sensor indica terra seca, e a rega deixa de depender de alguém estar presente. As luminárias permitem uso da horta à noite. Como o sistema opera em 12V de corrente contínua, o risco elétrico para voluntários é menor do que numa instalação de 127V ou 220V, e não há ruído nem emissão local, o que combina com um espaço de cultivo e compostagem.
 
-A escolha é assertiva financeiramente. Ao invés de pagar R$7.239,20 em 10 anos, o gasto estimado na rede solar é de R$3.660. Dividindo pelos 2.102,40 kWh (17,52 * 120) efetivamente consumidos, o custo médio fica em torno de R$3,44 por kWh na rede e R$1,74 por kWh no solar.
+A escolha é assertiva financeiramente. Ao invés de pagar R$7.239,20 em 10 anos, o gasto estimado na rede solar é de R$6.000. Dividindo pelos 2.102,40 kWh (17,52 * 120) efetivamente consumidos, o custo médio fica em torno de R$3,44 por kWh na rede e R$2,80 por kWh no solar.
 *Cálculo ilustrativo do grupo, sem desconto de valor no tempo e sem troca de bateria.*
 
 
@@ -32,14 +39,14 @@ Sendo assim, o projeto sustenta a escolha do solar em custo, autonomia, simplici
 ## Custos
 | Item | R$ |
 |---|---|
-| Painel 150 Wp | 600,00 |
+| Painel 150 Wp | 1.200,00 |
 | Controlador MPPT 30 A | 500,00 |
 | Bateria LiFePO4 12,8 V 100Ah | 1.000,00 |
 | Fusíveis, cabos, MC4, suporte, caixa, conversor 12→5 V | 600,00 |
 | Mão de obra de instalação | 1.500,00 |
 | Manutenção - limpeza e inspeção | 1.000,00 |
 | Documentação | 800,00 |
-| Total | 6.000 |
+| Total | 6.600 |
 
 
 ## Referências
