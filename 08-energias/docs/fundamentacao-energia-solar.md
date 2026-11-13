@@ -47,7 +47,7 @@ Sendo assim, o projeto sustenta a escolha do solar em custo, autonomia, simplici
 | Mão de obra de instalação | 1.000,00 |
 | Manutenção anual - limpeza e inspeção | 1.000,00 |
 | Documentação | 400,00 |
-| Total | 5.700,00 |
+| Total | 5.708,33 |
 
 
 ## Referências
