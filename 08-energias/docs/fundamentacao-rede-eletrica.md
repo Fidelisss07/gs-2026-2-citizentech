@@ -3,7 +3,7 @@ Os números do projeto vêm de `docs/consumo-energetico.md` e os dados de contex
 
 
 ## Benefícios da rede
-A rede entrega energia contínua sem que a horta precise armazená-la. Não há bateria para dimensionar, trocar ou proteger de furto, e a carga pode crescer sem redimensionamento: a bomba pode ser trocada por uma maior, a iluminação pode aumentar e ferramentas elétricas podem entrar na rotina da compostagem. A carga estimada é de 16,86 kWh por mês, abaixo do mínimo de 30 kWh que a distribuidora fatura numa ligação monofásica, então o sistema inicial sustenta o funcionamento previsto do projeto com ampla folga.
+A rede entrega energia contínua sem que a horta precise armazená-la. Não há bateria para dimensionar, trocar ou proteger de furto, e a carga pode crescer sem redimensionamento: a bomba pode ser trocada por uma maior, a iluminação pode aumentar e ferramentas elétricas podem entrar na rotina da compostagem. A carga estimada é de 15,18 kWh por mês, abaixo do mínimo de 30 kWh que a distribuidora fatura numa ligação monofásica, então o sistema inicial sustenta o funcionamento previsto do projeto com ampla folga.
 
 A rede também é um serviço regulado. As regras de prestação do serviço público de distribuição, com direitos e deveres do consumidor, estão na Resolução Normativa ANEEL nº 1.000/2021, e a qualidade do fornecimento é acompanhada pela ANEEL por indicadores de duração e frequência das interrupções, o DEC e o FEC. A tarifa é homologada pela agência e publicada pela distribuidora. Para a classe B3, a Enel São Paulo informa TUSD de R$472,42/MWh e TE de R$316,96/MWh desde 04/07/2026, o que dá R$0,78938/kWh sem tributos.
 
@@ -20,7 +20,7 @@ Acessibilidade de instalação, onde já existe rede próxima, a conexão é o c
 
 
 ## Limitações da rede
-O primeiro problema é de custo fixo. A distribuidora cobra o mínimo de 30 kWh por mês numa ligação monofásica, o que dá R$31,16 com tributos por um consumo de 16,86 kWh. Em 10 anos, o gasto estimado é de R$7.239,20 (conta mensal + custo de instalação), ou cerca de R$1,84 por kWh efetivamente consumido, quase 2,5 vezes mais que o valor base de cobrança.
+O primeiro problema é de custo fixo. A distribuidora cobra o mínimo de 30 kWh por mês numa ligação monofásica, o que dá R$31,16 com tributos por um consumo de 15,18 kWh. Em 10 anos, o gasto estimado é de R$7.239,20 (conta mensal + custo de instalação), ou cerca de R$3,97 por kWh efetivamente consumido (7.239,20/15,18*120), 5 vezes mais que o valor base de cobrança.
 É um cálculo ilustrativo, sem desconto no tempo e sem troca de bateria. Para uma carga pequena, a conta mínima pesa mais do que a energia usada, e economizar energia na horta não reduz o valor pago.
 
 O segundo problema é a incerteza da tarifa. O efeito médio dos reajustes anuais da Enel São Paulo foi de −2,24 % em 2023, −2,43 % em 2024, 13,94 % em 2025 e 10,18 % em 2026. O planejamento de longo prazo precisa tratar o custo da rede como variável.
