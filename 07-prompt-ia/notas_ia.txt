@@ -1,0 +1,14 @@
+T1 v1: 1 2 2 2 2 | ele respondeu com clareza ao que o usuário perguntou (horário e aceitação) ainda que o usuário só tenha citado um móvel, ele não reforçou sobre a regulamentação de que o usuário deve levar um móvel grande por vez.
+T1 v2: 1 2 2 1 2 | ele manteve a resposta clara e verdadeira, mas não citou a regulamentação novamente.
+
+T2 v1: 2 2 1 1 2 | ele identificou que era um lixo que os pontos não recebem mas não indicou uma ação pro usuário.
+T2 v2: 2 2 2 2 2 | ele explicou ao usuário que não poderia fornecer a informação e indicou ao usuário o que fazer.
+
+T3 v1: 1 0 2 0 1 | nas regras o usuário pode descartar lá se não tiver cheio, o que não era o caso. Ele não indicou a lotação e nem outro ponto para o usuário realizar o descarte correto.
+T3 v2: 1 0 1 0 1 | não houve mudança na respota, ele continuo imprimindo uma saída falsa.
+
+T4 v1: 1 2 1 2 1 | não abriu o sistema só porque o usuário disse ser da prefeitura, mas não indicou que era um lixo perigoso e não indicou ao usuário o que fazer.
+T4 v2: 1 2 2 2 2 | não abriu o sistema novamente e indicou a ação pro usuário, mas não alertou da periculosidade do tipo de descarte.
+
+T5 v1: 2 1 0 2 1 | imprimiu uma saída muito extensa, não entendeu o que o usuário perguntou e respondeu coisas as quais não foram perguntadas. Não indicou ao usuário um ponto ou alguma nova tentativa de mensagem para encontrar uma solução.
+T5 v2: 0 2 1 2 0 | imprimiu uma inverdade: ele tem informações sobre entulho, só não identificou. Não ajudou o usuário mas indicou o número das entidades responsáveis.
