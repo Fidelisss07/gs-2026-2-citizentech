@@ -1,0 +1,7 @@
+Para o morador, registrar um problema se resume a cinco informações: tipo de lixo, bairro, local, quantas vezes ele voltou depois de limpo e há quantos dias está lá. Quando o local já tem três registros, ou o lixo já voltou três vezes, o sistema avisa na hora que é um ponto viciado e diz o motivo, o que mostra que o problema já tinha sido apontado.
+
+Para a subprefeitura, o ganho está em saber onde olhar primeiro. O ranking por reincidência coloca no topo os lugares onde o lixo mais volta, e o ranking por dias em aberto mostra o que está parado há mais tempo. A diferença pesa na decisão: um ponto que voltou cinco vezes pede outra medida, como placa, câmera ou ecoponto por perto, e mandar a equipe de limpeza de novo só repete o gasto. As estatísticas por tipo de lixo e por bairro ajudam no planejamento, já que o predomínio de entulho de obra numa região indica falta de um lugar próximo para descartá-lo, e isso se resolve de outro jeito que um problema de lixo doméstico.
+
+Para a região, a vantagem é ter o problema registrado em dados que podem ser consultados, comparados e atualizados, em vez de depender de memória ou de reclamações soltas. A versão atual guarda os dados só na memória e usa registros simulados nos exemplos, então esses benefícios valem para o sistema alimentado com ocorrências reais. O passo seguinte é gravar os dados em arquivo ou banco e ligar os pontos de lixo orgânico à compostagem e à horta do Ciclo Verde.
+
+cd 03-estruturas-dados
