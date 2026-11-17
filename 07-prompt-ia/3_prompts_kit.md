@@ -1,7 +1,7 @@
 # Kit de prompts: assistente Ciclo Verde
 
 **GS 2026.2 · Prompt and Artificial Intelligence · Turma 1CCPR · Trio · Frente B (Descarte e sustentabilidade)**
-Gustavo Fidelis de Souza e Silva (RM 574666) · Rafael Meirelles (RM 574897) · Ana (RM 575081)
+Gustavo Fidelis de Souza e Silva (RM 574666) · Rafael Meirelles (RM 574897) · Anna Luisa Lima (RM 575081)
 
 Biblioteca com tudo o que é preciso para reaproveitar o assistente: o system prompt final, as versões de teste, o few-shot escolhido, o prompt do enriquecimento e o registro das mudanças.
 

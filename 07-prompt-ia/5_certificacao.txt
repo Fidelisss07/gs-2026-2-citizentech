@@ -4,7 +4,7 @@ Ciclo Verde - Turma 1CCPR - Trio - Frente B (Descarte e sustentabilidade)
 INTEGRANTES
 Gustavo Fidelis de Souza e Silva - RM 574666
 Rafael Meirelles - RM 574897
-Ana - RM 575081
+Anna Luisa Lima - RM 575081
 
 LINKS
 Notebook no Colab: https://colab.research.google.com/github/Fidelisss07/gs-2026-2-citizentech/blob/main/07-prompt-ia/1_Notebook_GS2026_2.ipynb
@@ -17,7 +17,7 @@ Ciclo Verde · Turma 1CCPR · Trio · Frente B (Descarte e sustentabilidade)
 ----------------------------------------------------------------
 Gustavo Fidelis de Souza e Silva · RM 574666
 Rafael Meirelles · RM 574897
-Ana · RM 575081
+Anna Luisa Lima · RM 575081
 ----------------------------------------------------------------
 Registros no 2_dados_servico.json: 12 (5 com status fora do normal)
 Correções das 4 regras: regra 4 - ids duplicados removidos: 1, regra 1 - status sem motivo corrigidos: 1, regra 2 - acessivel corrigidos: 6, regra 3 - horarios padronizados: 2, regra 3 - horarios que nao entendemos: 0

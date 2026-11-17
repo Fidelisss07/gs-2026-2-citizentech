@@ -6,7 +6,7 @@
 | --- | --- |
 | Gustavo Fidelis de Souza e Silva | 574666 |
 | Rafael Meirelles | 574897 |
-| Ana | 575081 |
+| Anna Luisa Lima | 575081 |
 
 ## O que é
 
@@ -82,7 +82,8 @@ Nenhum roteiro deu erro. Com os 18 exemplos, a seleção fez 153 comparações (
 | `mapa_pontos_viciados.py` | O sistema |
 | `diagrama_atividades.png` | Diagrama de atividades (UML) |
 | `diagrama_atividades.mmd` | O texto do diagrama, em Mermaid, para editar |
-| `relatorio.md` | Rascunho do relatório técnico (vai em PDF na entrega) |
+| `relatorio.md` | Texto do relatório técnico |
+| `relatorio_tecnico.pdf` | Relatório técnico em PDF (entrega) |
 | `link_video.txt` | Nomes, RMs e o link do vídeo |
 
 ## Vídeo
@@ -93,9 +94,9 @@ Link: [a preencher depois da gravação, em 17/11]
 
 | Integrante | O que fez |
 | --- | --- |
-| Gustavo Fidelis de Souza e Silva | [a preencher] |
+| Gustavo Fidelis de Souza e Silva | Definiu as decisões do projeto, conferiu o código e os testes e apresenta o vídeo |
 | Rafael Meirelles | [a preencher] |
-| Ana | [a preencher] |
+| Anna Luisa Lima | Escreveu os benefícios para a comunidade (seção 8 do relatório) |
 
 ## Uso de IA
 

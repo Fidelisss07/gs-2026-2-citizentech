@@ -2,7 +2,7 @@
 # GS 2026.2 - Data Structures and Algorithms - Ciclo Verde - Turma 1CCPR
 # Gustavo Fidelis de Souza e Silva (RM 574666)
 # Rafael Meirelles (RM 574897)
-# Ana (RM 575081)
+# Anna Luisa Lima (RM 575081)
 #
 # Sistema de console para registrar o lixo jogado na rua na região da Mooca
 # e mostrar onde ele mais volta depois de limpo.

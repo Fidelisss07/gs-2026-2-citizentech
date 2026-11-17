@@ -6,7 +6,7 @@
 | --- | --- |
 | Gustavo Fidelis de Souza e Silva (responsável pela 04) | 574666 |
 | Rafael Meirelles | 574897 |
-| Ana | 575081 |
+| Anna Luisa Lima | 575081 |
 
 Análise estatística com dados reais e oficiais da Prefeitura de São Paulo sobre o lixo da cidade, escrita para a Subprefeitura Mooca como cliente.
 

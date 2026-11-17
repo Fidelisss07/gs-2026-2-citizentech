@@ -10,7 +10,7 @@
 <tr><th>Integrante</th><th>RM</th></tr>
 <tr><td>Gustavo Fidelis de Souza e Silva</td><td>574666</td></tr>
 <tr><td>Rafael Meirelles</td><td>574897</td></tr>
-<tr><td>Ana</td><td>575081</td></tr>
+<tr><td>Anna Luisa Lima</td><td>575081</td></tr>
 </table>
 </div>
 <div class="rodape">São Paulo, novembro de 2026.<br>Dados oficiais da Prefeitura de São Paulo (AMLURB, SP Regula, SMUL/Geoinfo e Secretaria Municipal das Subprefeituras), consultados em 13/11/2026. Arquivos entregues junto: base_lixo_sao_paulo.xlsx (a base) e analise_lixo_sp.py (o código que gera todas as tabelas, medidas e gráficos deste relatório).</div>

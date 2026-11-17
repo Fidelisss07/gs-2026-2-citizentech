@@ -3,9 +3,9 @@ Este texto justifica a escolha da fonte renovável da alternativa A. Os números
 
 ## Dimensionamento solar
 - Parâmetros: HSP de projeto 3,5 kWh/m²·dia (mês mais fraco do inverno paulistano, com folga para sombra de prédios vizinhos), desempenho global PR = 0,75, bateria LiFePO4 com profundidade de descarga de 80 % e autonomia alvo de 1,5 dia.
-- Potência mínima do painel: P = 544 / (3,5 × 0,75) = 207,2 Wp. Adotado: 2 módulos de 150 Wp (300 Wp).
-- Energia gerada: em média anual (HSP 4,5) o painel entrega 300 × 4,5 × 0,75 = 1.012,5 Wh/dia; no pior mês, 300 × 3,5 × 0,75 = 787,5 Wh/dia, 30% acima do consumo.
-- Capacidade mínima da bateria: 544 × 1,5 / 0,8 = 1.020 Wh, ou 79,7 Ah a 12,8 V. Adotada: 12,8 V, 100 Ah (1.280 Wh), que dá 1.280 × 0,8 / 544 = 1,88 dia de autonomia com 80 % de descarga.
+- Potência mínima do painel: P = 584 / (3,5 × 0,75) = 222,5 Wp. Adotado: 2 módulos de 150 Wp (300 Wp).
+- Energia gerada: em média anual (HSP 4,5) o painel entrega 300 × 4,5 × 0,75 = 1.012,5 Wh/dia; no pior mês, 300 × 3,5 × 0,75 = 787,5 Wh/dia, 35% acima do consumo.
+- Capacidade mínima da bateria: 584 × 1,5 / 0,8 = 1.095 Wh, ou 85,5 Ah a 12,8 V. Adotada: 12,8 V, 100 Ah (1.280 Wh), que dá 1.280 × 0,8 / 584 = 1,75 dia de autonomia com 80 % de descarga.
 - Controlador: a corrente de 300 Wp em 12,8 V chega a cerca de 23,4 A. Adotado MPPT de 40 A, com folga.
 
 

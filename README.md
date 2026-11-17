@@ -25,10 +25,10 @@ ODS 11 (cidades sustentáveis), 12 (consumo e produção responsáveis) e 13 (a�
 | [02-computer-science](02-computer-science) | Computer Science | Rafael Meirelles |
 | [03-estruturas-dados](03-estruturas-dados) | Data Structures and Algorithms | Gustavo Fidelis |
 | [04-estatistica](04-estatistica) | Estatística / Modelagem Linear | Gustavo Fidelis |
-| — | Modelagem Matemática e Computacional (manuscrito, entregue só no portal) | Ana |
+| — | Modelagem Matemática e Computacional (manuscrito, entregue só no portal) | Anna Luisa Lima |
 | [06-python](06-python) | Pensamento Computacional e Automação em Python | Rafael Meirelles |
 | [07-prompt-ia](07-prompt-ia) | Prompt and Artificial Intelligence | Gustavo Fidelis |
-| [08-energias](08-energias) | Soluções em Energias Renováveis e Sustentáveis | Ana |
+| [08-energias](08-energias) | Soluções em Energias Renováveis e Sustentáveis | Anna Luisa Lima |
 
 ## Integrantes
 
@@ -36,7 +36,7 @@ ODS 11 (cidades sustentáveis), 12 (consumo e produção responsáveis) e 13 (a�
 | --- | --- |
 | Gustavo Fidelis de Souza e Silva | 574666 |
 | Rafael Meirelles | 574897 |
-| Ana | 575081 |
+| Anna Luisa Lima | 575081 |
 
 ## Regras do repositório
 

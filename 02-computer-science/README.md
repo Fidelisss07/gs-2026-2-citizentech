@@ -9,7 +9,7 @@ Gustavo Fidelis de Souza e Silva (RM 574666), Rafael Meirelles (RM 574897), Anna
 - `Relatorio_CS_Ciclo_Verde.pdf` contém o relatório com tabelas, código, circuitos e evidências reais dos testes.
 - `Relatorio_CS_Ciclo_Verde.docx` contém a versão editável.
 - `regras_denuncias.py` contém o código original do grupo.
-- `evidencias/logicly_reais/` contém as 20 capturas individuais do Logic.ly, a visão geral dos quatro circuitos, a captura do console e os registros de conferência.
+- As 20 capturas do Logic.ly, a visão geral dos quatro circuitos e a captura do console estão dentro do PDF (seção de evidências).
 
 ## Testes concluídos
 

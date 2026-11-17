@@ -8,7 +8,7 @@
 | Bomba de irrigação - 12V | 1 | 40 | 2 | 80 | 2,40 | 28,80 |
 | ESP32 + sensor capacitivo | 1 | 1 | 24 | 24 | 0,72 | 8,64 |
 | Refletor LED - 12V | 2 | 20 | 12 | 480 | 14,40 | 172,80 |
-| Total | | | | 544 | 17,52 | 210,24 |
+| Total | | | | 584 | 17,52 | 210,24 |
 
 
 ## Comparação
@@ -21,7 +21,7 @@
 | Viabilidade | Exige solicitação, vistoria e documentação da Enel; prazo da distribuidora | Instalação em um dia, sem burocracia com a Enel |
 | Impacto ambiental | Rede com fator médio de 0,0385 kg CO₂/kWh | Sem emissão na operação |
 | Vantagens | Sem limite de potência; sem bateria para trocar | Funciona em queda de rede; economia mensal; |
-| Limitações | Conta mínima mesmo sem consumo; obra civil | Autonomia de 1,9 dia; depende de insolação; furto do painel exige fixação segura |
+| Limitações | Conta mínima mesmo sem consumo; obra civil | Autonomia de 1,75 dia; depende de insolação; furto do painel exige fixação segura |
 
 - Economia mensal estimada de B contra A: 31,16 − 8,33 = R$ 22,83.
 - O investimento custa R$ 1.000,00 a mais na instalação (5.700,00 − 4.700,00). Esse valor se paga em 1.000 / (22,83 × 12) = 3,6 anos (3 anos e 6 meses).

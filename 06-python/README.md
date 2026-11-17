@@ -94,7 +94,7 @@ Dica: Entulho vai ao ecoponto, de graca. Na rua ele cria ponto viciado.
 - Cenario de descarte 100% correto: OK
 - Fluxo real com entradas invalidas seguido de cadastro e relatorio: OK
 
-Os arquivos `testes/*.txt` contêm as saídas reais dos fluxos de terminal. O código usa funções,
+As saídas reais dos fluxos de terminal foram conferidas durante os testes. O código usa funções,
 listas, input/print, operadores, if/elif/else, for e while. `classificar` e `nivel` fazem classificação;
 `calcular_indicadores` faz cálculo; as demais funções organizam entrada, cadastro e saída.
 

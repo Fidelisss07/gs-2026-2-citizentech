@@ -2,7 +2,7 @@
 # Ciclo Verde - Turma 1CCPR
 # Gustavo Fidelis de Souza e Silva (RM 574666)
 # Rafael Meirelles (RM 574897)
-# Ana (RM 575081)
+# Anna Luisa Lima (RM 575081)
 #
 # Análise estatística do lixo da cidade de São Paulo, com dados reais e oficiais.
 # Base: base_lixo_sao_paulo.xlsx (na mesma pasta deste arquivo), com 3 abas:

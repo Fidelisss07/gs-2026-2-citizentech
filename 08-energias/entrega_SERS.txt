@@ -1,0 +1,14 @@
+GLOBAL SOLUTION 2026.2 - SERS (Solucoes em Energias Renovaveis e Sustentaveis)
+Desafio: Neighborhood Action Dashboard - CitizenTech
+Projeto: Ciclo Verde - Horta Comunitaria + Ponto de Compostagem com Energia Solar
+Turma: 1CCPR
+
+Anna Luisa Lima - RM 575081
+Gustavo Fidelis de Souza e Silva - RM 574666
+Rafael Meirelles - RM 574897
+
+Link do repositorio GitHub:
+https://github.com/Fidelisss07/gs-2026-2-citizentech/tree/main/08-energias
+
+Link do video tecnico no YouTube (nao listado):
+[COLAR AQUI O LINK DO VIDEO]
