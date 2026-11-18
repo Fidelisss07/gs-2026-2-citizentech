@@ -14,9 +14,10 @@ A energia solar atende a demanda de 17,52 kWh por mês para uma bomba, um sensor
 
 Esse arranjo muda a rotina do espaço. A bomba passa a ligar quando o sensor indica terra seca, e a rega deixa de depender de alguém estar presente. As luminárias permitem uso da horta à noite. Como o sistema opera em 12V de corrente contínua, o risco elétrico para voluntários é menor do que numa instalação de 127V ou 220V, e não há ruído nem emissão local, o que combina com um espaço de cultivo e compostagem.
 
-A alternativa solar apresenta investimento inicial superior ao da nova ligação à rede elétrica. O CAPEX estimado é de R$ 7.200,00, enquanto a alternativa de rede apresenta R$ 4.700,00.
-A conta mensal estimada do sistema solar é de R$ 8,33, com provisão de manutenção anual de R$ 150,00. Considerando essas despesas e o horizonte de dez anos, o custo total estimado é de R$ 9.699,60.
-A comparação demonstra que a energia solar reduz a dependência da rede e os custos mensais de energia, mas, com as premissas atuais, não apresenta menor custo acumulado em dez anos.
+
+A energia solar atende à demanda estimada de 17,52 kWh por mês para uma bomba, um sensor e duas luminárias. O sistema dimensionado utiliza dois módulos de 150 Wp, totalizando 300 Wp, associados a uma bateria LiFePO4 de 100 Ah.
+
+Considerando HSP de projeto de 3,5 e desempenho global de 75%, a geração estimada no cenário de projeto é de 787,5 Wh/dia, aproximadamente 35% acima do consumo diário de 584 Wh. Essa margem é uma estimativa de dimensionamento e não representa garantia de atendimento em qualquer condição climática.
 *Cálculo ilustrativo do grupo.*
 
 
@@ -29,7 +30,10 @@ O solar também dá autonomia. Com bateria, a irrigação continua durante uma q
 
 
 ## Limitações da energia
-O ganho climático deste projeto é pequeno. O fator médio da rede brasileira foi de 0,0385 tCO₂/MWh em 2023, então a horta emitiria cerca de 4,3kg de CO₂ por ano na rede. A fonte solar tem emissões de ciclo de vida, que vêm sobretudo da fabricação: o IPCC aponta mediana de 41 gCO₂eq/kWh para solar em telhado e 48 gCO₂eq/kWh para usinas solares, contra 820 do carvão e 490 do gás natural.
+O ganho climático deste projeto é pequeno. O fator médio de emissão da rede utilizado é de 0,0385 kg CO2/kWh. Para o consumo anual estimado de 213,16 kWh, as emissões operacionais associadas seriam de aproximadamente 8,21 kg de CO2 por ano.
+As emissões de ciclo de vida dos módulos solares e da bateria não foram calculadas neste projeto. Portanto, os 8,21 kg representam apenas o potencial operacional de emissões evitadas sob a hipótese de atendimento integral da carga pela geração solar, e não uma redução líquida comprovada.
+
+A fonte solar tem emissões de ciclo de vida, que vêm sobretudo da fabricação: o IPCC aponta mediana de 41 gCO₂eq/kWh para solar em telhado e 48 gCO₂eq/kWh para usinas solares, contra 820 do carvão e 490 do gás natural.
 Aplicadas aos 204,40 kWh anuais, essas medianas dão entre 8,38 e 9,81kg por ano, e a bateria não está nesses números.
 A vantagem climática do solar aparece quando ele substitui geração fóssil, e no Brasil isso depende do momento: a geração termelétrica cresceu 12,3% em 2025, para 169,9 TWh.
 
