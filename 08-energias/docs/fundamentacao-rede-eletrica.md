@@ -30,14 +30,16 @@ O terceiro é a aprovação local. Em 10 de dezembro de 2025, um apagão afetou 
 Sendo assim, a rede se justifica quando há ponto de energia próximo, carga maior ou previsão de crescimento. Para a carga atual da horta, ela funciona e é limpa, mas custa mais ao longo de 10 anos e depende de um prestador que desempenha mal serviço de acordo à sua reguladora.
 
 ## Custos
-| Item | R$ |
-|---|---|
-| Conta mensal | 31,16 |
-| Instalação | 2.500,00 |
-| Equipamento para instalação | 1.000,00 |
-| Documentação | 1.200,00 |
-| Manutenção | 00,00 |
-| Total | 4.731,16 |
+| Item | Valor |
+|---|---:|
+| Instalação do padrão | R$ 2.500,00 |
+| Equipamentos | R$ 1.000,00 |
+| Documentação | R$ 1.200,00 |
+| **Investimento inicial (CAPEX)** | **R$ 4.700,00** |
+| Conta mensal | R$ 31,16 |
+| Manutenção anual | R$ 0,00 |
+| Contas em 10 anos | R$ 3.739,20 |
+| **Custo acumulado em 10 anos** | **R$ 8.439,20** |
 
 
 ## Referências
