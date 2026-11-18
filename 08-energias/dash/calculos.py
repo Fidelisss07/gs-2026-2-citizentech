@@ -187,13 +187,12 @@ def comparar(p, c):
     Compara:
     A  - Nova ligação à rede elétrica.
     A2 - Ponto existente, com extensão do circuito.
-    B  - Sistema solar com bateria.
+    B  - Sistema solar isolado com bateria.
 
     Separa investimento inicial (CAPEX), contas,
     manutenção e custo total de propriedade (TCO).
     """
 
-    # ALTERNATIVA A — REDE ELÉTRICA
     tarifa = tarifa_com_tributos(p)
 
     kwh_faturado = max(
@@ -203,16 +202,20 @@ def comparar(p, c):
 
     conta_mes = round(kwh_faturado * tarifa, 2)
 
+    # ALTERNATIVA A — REDE ELÉTRICA
     capex_a = (
         p["investimento_rede_instalacao"]
         + p["investimento_rede_equipamentos"]
         + p["investimento_rede_documentacao"]
     )
 
-    # ALTERNATIVA A2 — PONTO EXISTENTE
+    manutencao_a_ano = p["manutencao_rede_ano"]
+    manutencao_a_mes = manutencao_a_ano / 12
+
+    # ALTERNATIVA A2 — PONTO DE ENERGIA EXISTENTE
     capex_a_extensao = p["custo_circuito_interno"]
 
-    # ALTERNATIVA B — ENERGIA SOLAR
+    # ALTERNATIVA B — SISTEMA SOLAR
     custo_paineis = (
         p["quantidade_paineis"]
         * p["custo_unitario_painel"]
@@ -235,11 +238,19 @@ def comparar(p, c):
     manutencao_b_ano = p["manutencao_solar_ano"]
     manutencao_b_mes = manutencao_b_ano / 12
 
+    # CUSTOS OPERACIONAIS MENSAIS
+    custo_operacional_rede_mes = (
+        conta_mes + manutencao_a_mes
+    )
+
     custo_operacional_solar_mes = (
         conta_solar_mes + manutencao_b_mes
     )
 
-    economia_mes = conta_mes - custo_operacional_solar_mes
+    economia_mes = (
+        custo_operacional_rede_mes
+        - custo_operacional_solar_mes
+    )
 
     diferenca_investimento = capex_b - capex_a
 
@@ -259,18 +270,30 @@ def comparar(p, c):
         for ano in anos
     ])
 
-    manutencao_ano = np.array([
+    manutencao_rede_ano = np.array([
+        manutencao_a_ano if ano > 0 else 0
+        for ano in anos
+    ])
+
+    manutencao_solar_ano = np.array([
         manutencao_b_ano if ano > 0 else 0
         for ano in anos
     ])
 
-    acum_a = capex_a + np.cumsum(conta_ano)
+    # CUSTO ACUMULADO
+    acum_a = (
+        capex_a
+        + np.cumsum(conta_ano + manutencao_rede_ano)
+    )
 
-    acum_a2 = capex_a_extensao + np.cumsum(conta_ano)
+    acum_a2 = (
+        capex_a_extensao
+        + np.cumsum(conta_ano + manutencao_rede_ano)
+    )
 
     acum_b = (
         capex_b
-        + np.cumsum(conta_solar_ano + manutencao_ano)
+        + np.cumsum(conta_solar_ano + manutencao_solar_ano)
     )
 
     # CÁLCULO DO PAYBACK
@@ -314,16 +337,21 @@ def comparar(p, c):
 
         "diferenca_investimento": diferenca_investimento,
 
+        "manutencao_a_ano": manutencao_a_ano,
+        "manutencao_a_mes": manutencao_a_mes,
+
         "manutencao_b_ano": manutencao_b_ano,
         "manutencao_b_mes": manutencao_b_mes,
 
+        "custo_operacional_rede_mes": custo_operacional_rede_mes,
         "custo_operacional_solar_mes": custo_operacional_solar_mes,
         "economia_mes": economia_mes,
 
         "anos": anos,
         "conta_ano": conta_ano,
         "conta_solar_ano": conta_solar_ano,
-        "manutencao_ano": manutencao_ano,
+        "manutencao_rede_ano": manutencao_rede_ano,
+        "manutencao_ano": manutencao_solar_ano,
 
         "acum_a": acum_a,
         "acum_a_extensao": acum_a2,
