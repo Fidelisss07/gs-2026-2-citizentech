@@ -1,37 +1,147 @@
-# Comparação das alternativas e sensibilidade
-- Período de referência: 1 mês = 30 dias, 1 ano = 365 dias, horizonte de custos de 10 anos. 
+# Comparação das alternativas e análise de sensibilidade
+## Premissas gerais
+- Local: Mooca, São Paulo.
+- Período mensal: 30 dias.
+- Período anual: 365 dias.
+- Horizonte financeiro: 10 anos.
 - Valores em reais de novembro de 2026.
+- Reajuste tarifário: 0% no cenário-base.
+- Valores financeiros são estimativas, sem cotação formal.
 
-## Consumo energético
-| Equipamento | Qtd | P (W) | t (h/dia) | Wh/dia = qtd * p * t | kWh/mês = (Wh/dia * 30)/1000  | kWh/ano = kWh/mês * 12 |
-|---|---|---|---|---|---|---|
-| Bomba de irrigação - 12V | 1 | 40 | 2 | 80 | 2,40 | 28,80 |
-| ESP32 + sensor capacitivo | 1 | 1 | 24 | 24 | 0,72 | 8,64 |
-| Refletor LED - 12V | 2 | 20 | 12 | 480 | 14,40 | 172,80 |
-| Total | | | | 584 | 17,52 | 210,24 |
+## 1. Consumo energético
+A energia é calculada por:
+
+E = (quantidade × potência × horas) / 1000
+
+| Equipamento | Qtd. | Potência | Horas/dia | Wh/dia | kWh/mês |
+|---|---:|---:|---:|---:|---:|
+| Bomba de irrigação | 1 | 40 W | 2 | 80 | 2,40 |
+| ESP32 + sensor | 1 | 1 W | 24 | 24 | 0,72 |
+| Refletores LED | 2 | 20 W | 12 | 480 | 14,40 |
+| **Total** | | | | **584** | **17,52** |
+
+Consumo anual:
+584 × 365 / 1000 = 213,16 kWh/ano.
+
+A iluminação representa aproximadamente 82,2% do consumo diário.
+
+## 2. Investimento inicial — Alternativa A
+| Item | Valor |
+|---|---:|
+| Instalação do padrão | R$ 2.500,00 |
+| Equipamentos | R$ 1.000,00 |
+| Documentação | R$ 1.200,00 |
+| **CAPEX A** | **R$ 4.700,00** |
+
+A conta mensal considera o custo de disponibilidade de 30 kWh.
+
+Tarifa com tributos:
+0,78938 / (1 - 0,18 - 0,06) = R$ 1,03866/kWh.
+
+Conta mensal:
+30 × 1,03866 = aproximadamente R$ 31,16.
+
+## 3. Investimento inicial — Alternativa B
+
+| Item | Valor |
+|---|---:|
+| Dois painéis de 150 Wp | R$ 1.200,00 |
+| Bateria LiFePO4 100 Ah | R$ 1.000,00 |
+| Controlador MPPT | R$ 500,00 |
+| BOS | R$ 600,00 |
+| Mão de obra | R$ 1.000,00 |
+| Documentação | R$ 400,00 |
+| CAPEX-base | R$ 4.700,00 |
+| Reserva técnica para adequações | R$ 700,00 |
+| **CAPEX B** | **R$ 5.400,00** |
+
+A reserva técnica é estimativa provisória, sujeita a cotação e sem duplicidade com os componentes do BOS.
+
+## 4. Custos recorrentes
+
+| Indicador | Rede | Solar |
+|---|---:|---:|
+| Conta mensal | R$ 31,16 | R$ 8,33 |
+| Manutenção anual | R$ 0,00 | R$ 150,00 |
+| Manutenção mensal equivalente | R$ 0,00 | R$ 12,50 |
+
+A manutenção solar é uma provisão simplificada para limpeza e inspeção preventiva, com participação comunitária. Não inclui substituição de componentes ou assistência técnica profissional.
+
+## 5. Comparação em dez anos
+
+Fórmula:
+
+TCO = CAPEX + contas acumuladas + manutenção acumulada.
+
+### Alternativa A
+
+4.700 + (31,16 × 120)
+
+TCO A = R$ 8.439,20.
+
+### Alternativa B
+
+5.400 + (8,33 × 120) + (150 × 10)
+
+TCO B = R$ 7.899,60.
+
+| Indicador | Rede | Solar |
+|---|---:|---:|
+| CAPEX | R$ 4.700,00 | R$ 5.400,00 |
+| Contas em 10 anos | R$ 3.739,20 | R$ 999,60 |
+| Manutenção em 10 anos | R$ 0,00 | R$ 1.500,00 |
+| **TCO em 10 anos** | **R$ 8.439,20** | **R$ 7.899,60** |
+
+Economia estimada do solar:
+R$ 8.439,20 - R$ 7.899,60 = R$ 539,60.
+
+Investimento adicional:
+R$ 5.400,00 - R$ 4.700,00 = R$ 700,00.
+
+Economia operacional mensal:
+31,16 - 8,33 - 12,50 = R$ 10,33.
+
+Payback estimado:
+700 / (10,33 × 12) = aproximadamente 5,65 anos.
+
+## 6. Cenário A2 — ponto de energia existente
+
+Caso já exista um ponto de energia próximo, o investimento considerado é apenas a extensão do circuito interno, estimada em R$ 800,00.
+
+TCO A2:
+800 + (31,16 × 120) = R$ 4.539,20.
+
+Nesse cenário, a extensão da rede apresenta menor custo acumulado que o sistema solar.
+
+Portanto, a vantagem econômica do solar é válida quando comparada à necessidade de uma nova ligação, e não quando já existe infraestrutura elétrica disponível.
+
+## 7. Dimensionamento solar
+- Potência instalada: 300 Wp.
+- Quantidade: 2 módulos de 150 Wp.
+- HSP de projeto: 3,5.
+- Desempenho global: 75%.
+- Bateria: LiFePO4, 12,8 V e 100 Ah.
+- Profundidade de descarga: 80%.
+- Autonomia estimada: 1,75 dia.
+
+## 8. Indicadores ambientais
+Consumo anual:
+213,16 kWh.
+
+Fator médio de emissão:
+0,0385 kg CO2/kWh.
+
+Emissões da rede associadas à carga:
+213,16 × 0,0385 = aproximadamente 8,21 kg CO2/ano.
+
+Esse valor representa emissões operacionais potencialmente evitadas sob a hipótese de atendimento integral da carga pela energia solar. Não representa a pegada de carbono completa do sistema, pois fabricação e descarte dos componentes não estão incluídos.
 
 
-## Comparação
-| Critério | A. Rede | B. Solar + bateria |
-|---|---|---|
-| Consumo | 17,52 kWh/mês (30 kWh faturados) | 17,52 kWh/mês, gerados no local |
-| Instalação | R$4.731,16 | R$5.708,33 |
-| Custo mensal | R$31,16 | R$8,33 |
-| Custo em 10 anos | R$8.439,20 | R$6.699,60 |
-| Viabilidade | Exige solicitação, vistoria e documentação da Enel; prazo da distribuidora | Instalação em um dia, sem burocracia com a Enel |
-| Impacto ambiental | Rede com fator médio de 0,0385 kg CO₂/kWh | Sem emissão na operação |
-| Vantagens | Sem limite de potência; sem bateria para trocar | Funciona em queda de rede; economia mensal; |
-| Limitações | Conta mínima mesmo sem consumo; obra civil | Autonomia de 1,75 dia; depende de insolação; furto do painel exige fixação segura |
-
-- Economia mensal estimada de B contra A: 31,16 − 8,33 = R$ 22,83.
-- O investimento custa R$ 1.000,00 a mais na instalação (5.700,00 − 4.700,00). Esse valor se paga em 1.000 / (22,83 × 12) = 3,6 anos (3 anos e 6 meses).
-
-
-## Sensibilidade
-| Variação | Efeito |
-|---|---|
-| Refletores de 10W | Consumo 14,40 kWh/mês; painel mínimo 100Wp, bateria mínima 50Ah |
-| Bateria a R$100,00 / R$ 1.300 | Instalação B de R$800,00 / R$ 1.300,00 |
-| Padrão de entrada a R$ 1.800 / R$ 3.000 | Instalação A de R$ 2.600 / R$ 3.800 |
-| Tarifa com reajuste de 5% ao ano | Custo de A em 10 anos sobe para R$9.403,14 |
-| HSP de projeto 3,0 | Painel mínimo sobe para 135 Wp; o painel de 150 Wp ainda atende |
+## 9. Limitações
+- Preços estimados, sem cotações formais.
+- Reserva técnica de R$ 700 sujeita a validação.
+- Manutenção anual de R$ 150 sujeita a validação.
+- Não foi incluída substituição da bateria no horizonte de dez anos.
+- Reajuste tarifário de 0% no cenário-base.
+- Geração e operação são estimativas e simulações, não medições reais.
+- O cenário de nova ligação e o cenário de extensão de circuito possuem estruturas de investimento diferentes.
