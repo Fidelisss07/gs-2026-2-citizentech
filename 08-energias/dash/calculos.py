@@ -182,19 +182,18 @@ def dimensionar_solar(wh_dia, p):
 
 
 # COMPARAÇÃO FINANCEIRA
-
 def comparar(p, c):
     """
     Compara:
     A  - Nova ligação à rede elétrica.
-    A2 - Ponto de energia existente, com extensão do circuito.
+    A2 - Ponto existente, com extensão do circuito.
     B  - Sistema solar com bateria.
 
-    Separa CAPEX, contas, manutenção e TCO em 10 anos.
+    Separa investimento inicial (CAPEX), contas,
+    manutenção e custo total de propriedade (TCO).
     """
 
     # ALTERNATIVA A — REDE ELÉTRICA
-
     tarifa = tarifa_com_tributos(p)
 
     kwh_faturado = max(
@@ -202,10 +201,7 @@ def comparar(p, c):
         p["custo_disponibilidade_kwh_mes"]
     )
 
-    conta_mes = round(
-        kwh_faturado * tarifa,
-        2
-    )
+    conta_mes = round(kwh_faturado * tarifa, 2)
 
     capex_a = (
         p["investimento_rede_instalacao"]
@@ -213,11 +209,10 @@ def comparar(p, c):
         + p["investimento_rede_documentacao"]
     )
 
-    # Cenário A2: ponto existente
+    # ALTERNATIVA A2 — PONTO EXISTENTE
     capex_a_extensao = p["custo_circuito_interno"]
 
-    # ALTERNATIVA B — SOLAR
-
+    # ALTERNATIVA B — ENERGIA SOLAR
     custo_paineis = (
         p["quantidade_paineis"]
         * p["custo_unitario_painel"]
@@ -233,41 +228,33 @@ def comparar(p, c):
     )
 
     reserva_solar = p["reserva_adequacao_solar"]
-
     capex_b = capex_b_base + reserva_solar
 
     conta_solar_mes = p["conta_solar_mensal"]
 
     manutencao_b_ano = p["manutencao_solar_ano"]
-
     manutencao_b_mes = manutencao_b_ano / 12
 
     custo_operacional_solar_mes = (
         conta_solar_mes + manutencao_b_mes
     )
 
-    economia_mes = (
-        conta_mes - custo_operacional_solar_mes
-    )
+    economia_mes = conta_mes - custo_operacional_solar_mes
 
-    # PROJEÇÃO DE 10 ANOS
+    diferenca_investimento = capex_b - capex_a
 
+    # PROJEÇÃO FINANCEIRA DE 10 ANOS
     anos = np.arange(0, ANOS + 1)
-
     reajuste = p["reajuste_tarifa_aa"]
 
     conta_ano = np.array([
-        (
-            conta_mes * 12 * (1 + reajuste) ** (ano - 1)
-        )
+        conta_mes * 12 * (1 + reajuste) ** (ano - 1)
         if ano > 0 else 0
         for ano in anos
     ])
 
     conta_solar_ano = np.array([
-        (
-            conta_solar_mes * 12 * (1 + reajuste) ** (ano - 1)
-        )
+        conta_solar_mes * 12 * (1 + reajuste) ** (ano - 1)
         if ano > 0 else 0
         for ano in anos
     ])
@@ -286,8 +273,7 @@ def comparar(p, c):
         + np.cumsum(conta_solar_ano + manutencao_ano)
     )
 
-    # PAYBACK
-
+    # CÁLCULO DO PAYBACK
     def cruzamento(serie_a, serie_b):
         diferenca = serie_b - serie_a
 
@@ -326,6 +312,8 @@ def comparar(p, c):
         "reserva_solar": reserva_solar,
         "capex_b": capex_b,
 
+        "diferenca_investimento": diferenca_investimento,
+
         "manutencao_b_ano": manutencao_b_ano,
         "manutencao_b_mes": manutencao_b_mes,
 
@@ -344,103 +332,13 @@ def comparar(p, c):
         "tco_a": float(acum_a[-1]),
         "tco_a_extensao": float(acum_a2[-1]),
         "tco_b": float(acum_b[-1]),
+
+        "diferenca_tco": float(acum_b[-1] - acum_a[-1]),
 
         "payback_a_anos": payback_a,
         "payback_a_extensao_anos": payback_a2
     }
     
-    # CÁLCULO DO PAYBACK
-    def cruzamento(serie_a, serie_b):
-        """
-        Identifica o primeiro ano em que o custo acumulado
-        da alternativa B fica menor ou igual ao da alternativa A.
-        """
-
-        diferenca = serie_b - serie_a
-
-        if diferenca[0] <= 0:
-            return 0.0
-
-        for i in range(1, len(anos)):
-            if diferenca[i] <= 0:
-                d0 = diferenca[i - 1]
-                d1 = diferenca[i]
-
-                if d1 == d0:
-                    return float(anos[i])
-
-                fracao = (
-                    -d0 / (d1 - d0)
-                )
-
-                return float(
-                    anos[i - 1] + fracao
-                )
-
-        return None
-
-    payback_a = cruzamento(
-        acum_a,
-        acum_b
-    )
-
-    payback_a2 = cruzamento(
-        acum_a2,
-        acum_b
-    )
-
-    
-    # TOTAIS DE REFERÊNCIA
-    total_referencia_a = p["total_referencia_rede"]
-    total_referencia_b = p["total_referencia_solar"]
-
-
-    # RESULTADOS
-    return {
-        # Tarifas e contas
-        "tarifa_com_tributos": tarifa,
-        "kwh_faturado_mes": kwh_faturado,
-        "conta_mes": conta_mes,
-        "conta_solar_mes": conta_solar_mes,
-
-        # Totais de referência
-        "total_referencia_a": total_referencia_a,
-        "total_referencia_b": total_referencia_b,
-
-        # Investimentos
-        "capex_a": capex_a,
-        "capex_a_extensao": capex_a_extensao,
-        "capex_b": capex_b,
-
-        # Manutenção
-        "manutencao_b_ano": manutencao_b_ano,
-        "manutencao_b_mes": manutencao_b_mes,
-        "om_b_mes": manutencao_b_mes,
-
-        # Diferença operacional
-        "custo_operacional_solar_mes": custo_operacional_solar_mes,
-        "economia_mes": economia_mes,
-
-        # Projeções
-        "anos": anos,
-        "conta_ano": conta_ano,
-        "conta_solar_ano": conta_solar_ano,
-        "manutencao_ano": manutencao_ano,
-        "acum_a": acum_a,
-        "acum_a_extensao": acum_a2,
-        "acum_b": acum_b,
-
-        # Custo total de propriedade
-        "tco_a": float(acum_a[-1]),
-        "tco_a_extensao": float(acum_a2[-1]),
-        "tco_b": float(acum_b[-1]),
-
-        # Retorno financeiro
-        "payback_a_anos": payback_a,
-        "payback_a_extensao_anos": payback_a2,
-    }
-
-
 # INDICADORES AMBIENTAIS
 def ambiental(p, c):
     """
