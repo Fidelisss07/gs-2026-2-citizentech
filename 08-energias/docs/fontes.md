@@ -24,7 +24,15 @@ Consultas feitas em 12/11/2026.
   
 - Bateria LiFePO4 12V: média de R$1.000,00: https://br.ebay.com/b/Lithium-Iron-Phosphate-LiFePO-4-12-V-Rechargeable-Batteries/48619/bn_7116771597
   
-- Fusíveis, cabos, conectores, suporte, caixa e conversor (R$ 600), mão de obra (R$ 400) e circuito até a horta (R$ 800): estimativas do grupo, sem cotação.
+- Fusíveis, cabos, conectores, suporte, caixa e conversor (R$ 600,00): estimativa do grupo, sem cotação formal.
+
+- Mão de obra de instalação solar (R$ 1.000,00): premissa orçamentária adotada pelo grupo, sem cotação formal.
+
+- Adequações adicionais de infraestrutura solar (R$ 2.500,00): reserva preliminar para adequações locais, fixação, proteção e instalação elétrica específica. Valor adotado como premissa do projeto, ainda sem orçamento formal e sujeito a validação técnica. Deve ser verificado para evitar sobreposição com BOS e mão de obra.
+
+- Manutenção solar (R$ 150,00 por ano): provisão simplificada do grupo para limpeza e inspeção preventiva, sem orçamento formal. Não contempla substituição de componentes ou assistência técnica profissional.
+
+- Circuito interno até a horta (R$ 800,00): estimativa do grupo para o cenário A2, em que já existe um ponto de energia próximo.
 
 
 ## Emissões
