@@ -100,14 +100,15 @@ Para a região, a vantagem é ter o problema registrado em dados que podem ser c
 
 ## 9. Uso de IA
 
-- **Claude Code (Anthropic):** montou o checklist do PDF e escreveu o rascunho do código, dos roteiros de teste, do diagrama e deste relatório.
+- **Claude Code (Anthropic):** montou o checklist do PDF e escreveu o rascunho do código, dos roteiros de teste, do diagrama e deste relatório. Também fez a animação do vídeo de demonstração.
+- **ElevenLabs:** voz de IA que narra o vídeo de demonstração, lendo o roteiro do trio.
 - **Decisões do projeto:** foram aprovadas pelo Fidelis, que conferiu o checklist e os testes com a ajuda do Claude (chat). São elas: as categorias, os vetores paralelos, os critérios de ordenação, os dois motivos do alerta e o "0" para sair.
 
 ## 10. O que cada um fez
 
 | Integrante | O que fez |
 | --- | --- |
-| Gustavo Fidelis de Souza e Silva | Definiu as decisões do projeto (categorias, vetores paralelos, critérios de ordenação e alerta), conferiu o código e os testes feitos com o Claude Code e apresenta o vídeo de demonstração |
+| Gustavo Fidelis de Souza e Silva | Definiu as decisões do projeto (categorias, vetores paralelos, critérios de ordenação e alerta), conferiu o código e os testes feitos com o Claude Code e revisou o vídeo de demonstração |
 | Rafael Meirelles | [FIDELIS: preencher o que o Rafael fez] |
 | Anna Luisa Lima | Escreveu a seção 8, sobre os benefícios para a comunidade |
 

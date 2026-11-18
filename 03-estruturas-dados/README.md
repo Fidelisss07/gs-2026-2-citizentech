@@ -85,16 +85,19 @@ Nenhum roteiro deu erro. Com os 18 exemplos, a seleção fez 153 comparações (
 | `relatorio.md` | Texto do relatório técnico |
 | `relatorio_tecnico.pdf` | Relatório técnico em PDF (entrega) |
 | `link_video.txt` | Nomes, RMs e o link do vídeo |
+| `video/demonstracao_mapa_pontos_viciados.mp4` | Vídeo de demonstração (2min40) |
 
 ## Vídeo
 
-Link: [a preencher depois da gravação, em 17/11]
+Vídeo de demonstração (2min40): [`video/demonstracao_mapa_pontos_viciados.mp4`](video/demonstracao_mapa_pontos_viciados.mp4)
+
+O vídeo mostra o programa rodando com os dados de exemplo, ao lado de uma animação dos vetores, da busca e da ordenação. A animação foi feita com o Claude Code, e a narração usa uma voz de IA (ElevenLabs).
 
 ## O que cada um fez
 
 | Integrante | O que fez |
 | --- | --- |
-| Gustavo Fidelis de Souza e Silva | Definiu as decisões do projeto, conferiu o código e os testes e apresenta o vídeo |
+| Gustavo Fidelis de Souza e Silva | Definiu as decisões do projeto, conferiu o código e os testes e revisou o vídeo |
 | Rafael Meirelles | [a preencher] |
 | Anna Luisa Lima | Escreveu os benefícios para a comunidade (seção 8 do relatório) |
 
