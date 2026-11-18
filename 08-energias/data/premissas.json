@@ -47,8 +47,8 @@
   "manutencao_solar_ano": 150,
 
   "observacao_equipamentos_comuns": "Bomba, lâmpadas, ESP32 e sensor são iguais nas duas alternativas e ficam fora da comparação dos investimentos de implementação.",
-  "observacao_manutencao_rede": "R$ 230 por ano como provisão estimada para inspeção preventiva da instalação elétrica interna, reaperto de conexões, verificação de proteções e pequenos reparos. Não representa cobrança da distribuidora nem orçamento contratado.",
+  "observacao_manutencao_rede": "R$ 630 por ano como provisão estimada para manutenção e reposição da infraestrutura elétrica interna, incluindo inspeções, reparos e reserva para substituição de componentes. Premissa do grupo, sujeita a validação por orçamento.",
   "observacao_reserva_solar": "R$ 3.500 como premissa preliminar para adequações específicas do local, incluindo base e fixação, abrigo e proteção dos componentes e adequação da passagem de cabos. Valor sujeito a cotação e validação técnica. Não duplicar itens já incluídos no BOS ou na mão de obra.",
   "observacao_conta_solar": "R$ 0,00 por mês, considerando a alternativa solar como sistema isolado off-grid, sem consumo faturado pela distribuidora.",
-  "observacao_manutencao_solar": "R$ 150 por ano como provisão simplificada de limpeza e inspeção preventiva, com participação comunitária. Não inclui substituição de componentes nem assistência técnica profissional."
+  "observacao_manutencao_solar": "R$ 150 por ano como provisão simplificada para limpeza e inspeção preventiva, com participação comunitária."
 }
