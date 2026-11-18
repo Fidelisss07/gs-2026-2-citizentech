@@ -297,11 +297,12 @@ with b:
     )
 
     st.caption(
-        f"CAPEX-base: {brl(comp['capex_b_base'])}. "
-        f"Adequações adicionais: {brl(comp['reserva_solar'])}. "
-        f"Manutenção mensal equivalente: "
-        f"{brl(comp['manutencao_b_mes'])}."
-    )
+    f"CAPEX-base: {brl(comp['capex_b_base'])}. "
+    f"Adequações adicionais: {brl(comp['reserva_solar'])}. "
+    f"Manutenção mensal equivalente: "
+    f"{brl(comp['manutencao_b_mes'])}. "
+    "Conta da distribuidora considerada R$ 0,00 por ser um sistema isolado off-grid."
+)
 
 st.info(
     f"A alternativa solar exige investimento inicial "
