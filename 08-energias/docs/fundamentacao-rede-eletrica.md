@@ -3,12 +3,12 @@ Este texto justifica a escolha da fonte renovável da alternativa A. Os números
 
 
 ## Benefícios da rede
-A rede entrega energia contínua sem que a horta precise armazená-la. Não há bateria para dimensionar, trocar ou proteger de furto, e a carga pode crescer sem redimensionamento: a bomba pode ser trocada por uma maior, a iluminação pode aumentar e ferramentas elétricas podem entrar na rotina da compostagem. A carga estimada é de 15,18 kWh por mês, abaixo do mínimo de 30 kWh que a distribuidora fatura numa ligação monofásica, então o sistema inicial sustenta o funcionamento previsto do projeto com ampla folga.
+A rede entrega energia contínua sem que a horta precise armazená-la. Não há bateria para dimensionar, trocar ou proteger de furto, e a carga pode crescer sem redimensionamento: a bomba pode ser trocada por uma maior, a iluminação pode aumentar e ferramentas elétricas podem entrar na rotina da compostagem. A carga estimada é de 17,52 kWh por mês, abaixo do mínimo de 30 kWh que a distribuidora fatura numa ligação monofásica, então o sistema inicial sustenta o funcionamento previsto do projeto com ampla folga.
 
 A rede também é um serviço regulado. As regras de prestação do serviço público de distribuição, com direitos e deveres do consumidor, estão na Resolução Normativa ANEEL nº 1.000/2021, e a qualidade do fornecimento é acompanhada pela ANEEL por indicadores de duração e frequência das interrupções, o DEC e o FEC. A tarifa é homologada pela agência e publicada pela distribuidora. Para a classe B3, a Enel São Paulo informa TUSD de R$472,42/MWh e TE de R$316,96/MWh desde 04/07/2026, o que dá R$0,78938/kWh sem tributos.
 
 A energia da rede brasileira tem baixa intensidade de carbono. O Balanço Energético Nacional 2026 registra 86,8% de renováveis na matriz elétrica em 2025, hidráulica em 51,2%, eólica em 14,9% e solar em 11,4%.
-O fator médio de emissão do Sistema Interligado Nacional foi de 0,0385 tCO₂/MWh em 2023 (Ministério da Ciência, Tecnologia e Inovação), e os valores mensais de 2025 ficaram entre 0,0215 e 0,0289. Com 110,96 kWh por ano, a horta emitiria cerca de 4,3kg de CO₂ na rede.
+O fator médio de emissão do Sistema Interligado Nacional foi de 0,0385 tCO₂/MWh em 2023 (Ministério da Ciência, Tecnologia e Inovação), e os valores mensais de 2025 ficaram entre 0,0215 e 0,0289. Com 213,16 kWh por ano, a horta teria emissões operacionais associadas de aproximadamente 8,21 kg de CO2 por ano na rede.
 
 O investimento inicial também é considerado acessível. A composição SINAPI nº 101491 do padrão de entrada monofásico registra R$1.951,37 sem o poste, e matéria de mercado de 2026 aponta média de R$2.400 para a instalação.
 O grupo adotou R$2.500 de instalação e R$1000 de circuito até a horta, num total de R$ 3.500.
@@ -28,6 +28,7 @@ O segundo problema é a incerteza da tarifa. O efeito médio dos reajustes anuai
 O terceiro é a aprovação local. Em 10 de dezembro de 2025, um apagão afetou cerca de 4,4 milhões de clientes na capital paulista, e a ANEEL concluiu que o desempenho da Enel nesse episódio foi insatisfatório. Entretanto, apagões no Estado de São Paulo tem se tornado cada vez mais comuns, advindos de diversos fatores: eventos climáticos extremos, infraestrutura elétrica envelhecida, falta de manejo arbóreo e falhas operacionais das concessionárias. Fato é, essas quedas são atribuídas à distribuidora ENEL, que atualmente está na posição 30ª entre as 33 grandes distribuidoras do país, segundo o relatório técnico da ANEEL de de abril de 2026. 
 
 Sendo assim, a rede se justifica quando há ponto de energia próximo, carga maior ou previsão de crescimento. Para a carga atual da horta, ela funciona e é limpa, mas custa mais ao longo de 10 anos e depende de um prestador que desempenha mal serviço de acordo à sua reguladora.
+
 
 ## Custos
 | Item | Valor |
