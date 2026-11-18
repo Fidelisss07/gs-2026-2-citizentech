@@ -176,7 +176,7 @@ k[2].metric(
 )
 
 k[3].metric(
-    "CO₂ evitado",
+    "CO₂ potencialmente evitado",
     f"{ind['co2_evitado_kg_ano']:.1f} kg/ano",
     help="Estimativa baseada no fator médio de emissão do SIN utilizado no projeto.",
     delta_color="off"
@@ -263,14 +263,14 @@ with a:
     )
 
     st.metric(
-    "Manutenção e reposição anual",
-    brl(comp["manutencao_a_ano"])
+        "Manutenção e reposição anual",
+        brl(comp["manutencao_a_ano"])
     )
 
-st.caption(
-    "Provisão estimada para manutenção e reposição da infraestrutura "
-    "elétrica interna. Não representa uma cobrança da distribuidora."
-)
+    st.caption(
+        "Provisão estimada para manutenção e reposição da infraestrutura "
+        "elétrica interna. Não representa uma cobrança da distribuidora."
+    )
 
     st.caption(
         "Inclui instalação do padrão, equipamentos "
@@ -297,12 +297,13 @@ with b:
     )
 
     st.caption(
-    f"CAPEX-base: {brl(comp['capex_b_base'])}. "
-    f"Adequações adicionais: {brl(comp['reserva_solar'])}. "
-    f"Manutenção mensal equivalente: "
-    f"{brl(comp['manutencao_b_mes'])}. "
-    "Conta da distribuidora considerada R$ 0,00 por ser um sistema isolado off-grid."
-)
+        f"CAPEX-base: {brl(comp['capex_b_base'])}. "
+        f"Adequações adicionais: {brl(comp['reserva_solar'])}. "
+        f"Manutenção mensal equivalente: "
+        f"{brl(comp['manutencao_b_mes'])}. "
+        "Conta da distribuidora considerada R$ 0,00 "
+        "por ser um sistema isolado off-grid."
+    )
 
 st.info(
     f"A alternativa solar exige investimento inicial "
