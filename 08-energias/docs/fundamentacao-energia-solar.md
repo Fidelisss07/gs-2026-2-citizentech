@@ -14,7 +14,9 @@ A energia solar atende a demanda de 17,52 kWh por mês para uma bomba, um sensor
 
 Esse arranjo muda a rotina do espaço. A bomba passa a ligar quando o sensor indica terra seca, e a rega deixa de depender de alguém estar presente. As luminárias permitem uso da horta à noite. Como o sistema opera em 12V de corrente contínua, o risco elétrico para voluntários é menor do que numa instalação de 127V ou 220V, e não há ruído nem emissão local, o que combina com um espaço de cultivo e compostagem.
 
-A escolha é assertiva financeiramente. Ao invés de pagar R$8.439,20 em 10 anos, o gasto estimado na rede solar é de R$6.699,60. Dividindo pelos 2.102,40 kWh (17,52 * 120) efetivamente consumidos, o custo médio fica em torno de R$4,01 por kWh na rede e R$3,18 por kWh no solar.
+A alternativa solar apresenta investimento inicial superior ao da nova ligação à rede elétrica. O CAPEX estimado é de R$ 7.200,00, enquanto a alternativa de rede apresenta R$ 4.700,00.
+A conta mensal estimada do sistema solar é de R$ 8,33, com provisão de manutenção anual de R$ 150,00. Considerando essas despesas e o horizonte de dez anos, o custo total estimado é de R$ 9.699,60.
+A comparação demonstra que a energia solar reduz a dependência da rede e os custos mensais de energia, mas, com as premissas atuais, não apresenta menor custo acumulado em dez anos.
 *Cálculo ilustrativo do grupo.*
 
 
@@ -37,17 +39,24 @@ Sendo assim, o projeto sustenta a escolha do solar em custo, autonomia, simplici
 
 
 ## Custos
-| Item | R$ |
-|---|---|
-| Painel 150 Wp | 1.200,00 |
-| Conta mensal | 8,33 |
-| Controlador MPPT 30 A | 500,00 |
-| Bateria LiFePO4 12,8 V 100Ah | 1.000,00 |
-| Fusíveis, cabos, MC4, suporte, caixa, conversor 12→5 V | 600,00 |
-| Mão de obra de instalação | 1.000,00 |
-| Manutenção anual - limpeza e inspeção | 1.000,00 |
-| Documentação | 400,00 |
-| Total | 5.708,33 |
+| Item | Valor |
+|---|---:|
+| Dois painéis de 150 Wp | R$ 1.200,00 |
+| Bateria LiFePO4 12,8 V / 100 Ah | R$ 1.000,00 |
+| Controlador MPPT 40 A | R$ 500,00 |
+| Materiais e componentes BOS | R$ 600,00 |
+| Mão de obra de instalação | R$ 1.000,00 |
+| Documentação | R$ 400,00 |
+| **CAPEX-base** | **R$ 4.700,00** |
+| Adequações adicionais de infraestrutura | R$ 2.500,00 |
+| **Investimento inicial total** | **R$ 7.200,00** |
+| Conta mensal | R$ 8,33 |
+| Manutenção anual | R$ 150,00 |
+| Contas em 10 anos | R$ 999,60 |
+| Manutenção em 10 anos | R$ 1.500,00 |
+| **Custo total em 10 anos** | **R$ 9.699,60** |
+
+A estimativa de adequações adicionais de infraestrutura é provisória e depende de validação técnica e orçamentária.
 
 
 ## Referências
