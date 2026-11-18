@@ -19,7 +19,6 @@ O projeto propõe a implantação de uma horta comunitária integrada a um ponto
 *Comparamos essa solução com a ligação à rede da Enel (classe tarifária B3, demais classes) para a mesma carga, em 10 anos.*
 
 
-
 ## Indicadores usados no dashboard
 | Indicador | Valor | Origem |
 |---|---:|---|
@@ -33,14 +32,16 @@ O projeto propõe a implantação de uma horta comunitária integrada a um ponto
 ## Comparação financeira
 | Indicador | Rede elétrica | Solar |
 |---|---:|---:|
-| Investimento inicial | R$ 4.700,00 | R$ 5.400,00 |
+| Investimento inicial | R$ 4.700,00 | R$ 7.200,00 |
 | Conta mensal | R$ 31,16 | R$ 8,33 |
 | Manutenção anual | R$ 0,00 | R$ 150,00 |
-| Custo acumulado em 10 anos | R$ 8.439,20 | R$ 7.899,60 |
+| Contas em 10 anos | R$ 3.739,20 | R$ 999,60 |
+| Manutenção em 10 anos | R$ 0,00 | R$ 1.500,00 |
+| **Custo acumulado em 10 anos** | **R$ 8.439,20** | **R$ 9.699,60** |
 
-A alternativa solar apresenta investimento inicial R$ 700,00 maior, mas custo acumulado estimado R$ 539,60 menor em dez anos, na comparação com uma nova ligação à rede.
+A alternativa solar apresenta investimento inicial R$ 2.500,00 maior que o da nova ligação à rede elétrica. Apesar da redução dos custos operacionais mensais, o custo acumulado estimado do sistema solar permanece R$ 1.260,40 superior em dez anos.
 
-A reserva técnica solar e a manutenção são estimativas sujeitas à validação por cotação.
+A estimativa de adequações adicionais de infraestrutura e a provisão de manutenção anual estão sujeitas à validação por cotação.
 
 
 ## Como executar o projeto
