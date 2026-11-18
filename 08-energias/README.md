@@ -19,14 +19,28 @@ O projeto propõe a implantação de uma horta comunitária integrada a um ponto
 *Comparamos essa solução com a ligação à rede da Enel (classe tarifária B3, demais classes) para a mesma carga, em 10 anos.*
 
 
+
 ## Indicadores usados no dashboard
 | Indicador | Valor | Origem |
-|---|---|---|
-| Consumo | 17,52 kWh/mês | Seção 1 |
-| Economia estimada | R$ 22,83/mês | Seção 5 |
-| Energia renovável atendida | 100 % | Simulação anual de 365 dias, sem dia de falta de energia |
-| CO₂ evitado | 7,6 kg/ano | 198,56 kWh × 0,0385 kg/kWh (MCTI, média anual do SIN em 2023). Com os fatores mensais de 2025 (0,0215 a 0,0289 t/MWh), fica entre 4,3 e 5,7 kg/ano |
+|---|---:|---|
+| Consumo energético | 17,52 kWh/mês | Equipamentos e período de 30 dias |
+| Economia operacional estimada | R$ 10,33/mês | Diferença entre conta da rede e custos operacionais solares, incluindo manutenção |
+| Energia renovável atendida | Resultado da simulação | Simulação anual de geração, bateria e consumo |
+| Emissões operacionais potencialmente evitadas | 8,21 kg CO2/ano | 213,16 kWh × 0,0385 kg CO2/kWh |
 | Autonomia da bateria | 1,75 dia | 1.280 Wh × 0,8 / 584 Wh/dia |
+
+
+## Comparação financeira
+| Indicador | Rede elétrica | Solar |
+|---|---:|---:|
+| Investimento inicial | R$ 4.700,00 | R$ 5.400,00 |
+| Conta mensal | R$ 31,16 | R$ 8,33 |
+| Manutenção anual | R$ 0,00 | R$ 150,00 |
+| Custo acumulado em 10 anos | R$ 8.439,20 | R$ 7.899,60 |
+
+A alternativa solar apresenta investimento inicial R$ 700,00 maior, mas custo acumulado estimado R$ 539,60 menor em dez anos, na comparação com uma nova ligação à rede.
+
+A reserva técnica solar e a manutenção são estimativas sujeitas à validação por cotação.
 
 
 ## Como executar o projeto
