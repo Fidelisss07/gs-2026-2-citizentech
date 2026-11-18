@@ -1,80 +1,105 @@
-# Alternativa B: energia solar fotovoltaica 
-Este texto justifica a escolha da fonte renovável da alternativa A. Os números do projeto vêm de `docs/consumo-energetico.md`. Os dados de contexto (custos globais, matriz brasileira, emissões) estão nas fontes listadas ao final.
+# Alternativa B: energia solar fotovoltaica
+Este texto apresenta a fundamentação da alternativa de geração solar fotovoltaica com armazenamento em bateria. Os números de consumo vêm de `docs/consumo-energetico.md`. Os custos são premissas preliminares do grupo.
+
 
 ## Dimensionamento solar
-- Parâmetros: HSP de projeto 3,5 kWh/m²·dia (mês mais fraco do inverno paulistano, com folga para sombra de prédios vizinhos), desempenho global PR = 0,75, bateria LiFePO4 com profundidade de descarga de 80 % e autonomia alvo de 1,5 dia.
-- Potência mínima do painel: P = 584 / (3,5 × 0,75) = 222,5 Wp. Adotado: 2 módulos de 150 Wp (300 Wp).
-- Energia gerada: em média anual (HSP 4,5) o painel entrega 300 × 4,5 × 0,75 = 1.012,5 Wh/dia; no pior mês, 300 × 3,5 × 0,75 = 787,5 Wh/dia, 35% acima do consumo.
-- Capacidade mínima da bateria: 584 × 1,5 / 0,8 = 1.095 Wh, ou 85,5 Ah a 12,8 V. Adotada: 12,8 V, 100 Ah (1.280 Wh), que dá 1.280 × 0,8 / 584 = 1,75 dia de autonomia com 80 % de descarga.
-- Controlador: a corrente de 300 Wp em 12,8 V chega a cerca de 23,4 A. Adotado MPPT de 40 A, com folga.
+Parâmetros adotados:
+- HSP de projeto: 3,5 kWh/m²·dia.
+- Desempenho global do sistema: 0,75.
+- Bateria LiFePO4 com profundidade de descarga de 80%.
+- Autonomia-alvo: 1,5 dia.
+
+Potência mínima do painel: P = 584 / (3,5 × 0,75) = **222,5 Wp**.
+
+Foram adotados dois módulos de 150 Wp, totalizando 300 Wp.
+
+Geração estimada no cenário de projeto: 300 × 3,5 × 0,75 = **787,5 Wh/dia**.
+
+Capacidade mínima da bateria: 584 × 1,5 / 0,8 = **1.095 Wh**, ou aproximadamente 85,5 Ah em 12,8 V.
+
+Foi adotada uma bateria LiFePO4 de 12,8 V e 100 Ah, com energia nominal de 1.280 Wh. Considerando profundidade de descarga de 80%, a energia utilizável é de 1.024 Wh.
+
+Autonomia estimada: 1.024 / 584 = **1,75 dia**.
+
+O controlador adotado é MPPT de 40 A, sujeito à confirmação de compatibilidade elétrica com os módulos, a bateria e a configuração final do sistema.
 
 
-## Benefícios da energia
-A energia solar atende a demanda de 17,52 kWh por mês para uma bomba, um sensor e duas luminárias no próprio local, sem estender rede, sem solicitar ligação e sem combustível. O Manual de Engenharia para Sistemas Fotovoltaicos do CEPEL/CRESESB apresenta a tecnologia justamente como opção para levar energia a quem a rede não atende e para manter uma matriz elétrica apoiada em fontes renováveis. Um painel de 150 Wp com bateria de 100 Ah cobre a carga mesmo no mês de menor insolação, com folga de cerca de 20% na geração.
+## Benefícios da energia solar
+A energia solar permite atender à demanda estimada de 17,52 kWh por mês para uma bomba, um sensor e duas luminárias, sem depender de uma ligação convencional à rede elétrica.
 
-Esse arranjo muda a rotina do espaço. A bomba passa a ligar quando o sensor indica terra seca, e a rega deixa de depender de alguém estar presente. As luminárias permitem uso da horta à noite. Como o sistema opera em 12V de corrente contínua, o risco elétrico para voluntários é menor do que numa instalação de 127V ou 220V, e não há ruído nem emissão local, o que combina com um espaço de cultivo e compostagem.
+Com bateria, o sistema pode armazenar energia para utilização em períodos sem geração solar. Isso permite maior autonomia operacional e reduz a dependência de fornecimento externo.
 
+A automação da irrigação permite acionar a bomba quando o sensor identifica umidade do solo abaixo do limite definido. As luminárias possibilitam o uso da horta no período noturno.
 
-A energia solar atende à demanda estimada de 17,52 kWh por mês para uma bomba, um sensor e duas luminárias. O sistema dimensionado utiliza dois módulos de 150 Wp, totalizando 300 Wp, associados a uma bateria LiFePO4 de 100 Ah.
-
-Considerando HSP de projeto de 3,5 e desempenho global de 75%, a geração estimada no cenário de projeto é de 787,5 Wh/dia, aproximadamente 35% acima do consumo diário de 584 Wh. Essa margem é uma estimativa de dimensionamento e não representa garantia de atendimento em qualquer condição climática.
-*Cálculo ilustrativo do grupo.*
+A alternativa também tem valor educativo, pois permite demonstrar geração renovável, armazenamento de energia, monitoramento e uso eficiente de recursos.
 
 
-## Justificativa da escolha da energia
-O custo da geração solar caiu de forma contínua. Segundo a IRENA, o custo nivelado médio mundial da energia solar fotovoltaica foi de US$44/MWh em 2025, e mais de 90% dos projetos renováveis de grande porte comissionados naquele ano entregaram energia mais barata que a usina fóssil nova mais barata do mesmo mercado. Desde 2010, o custo do solar caiu 89%. Os sistemas com bateria seguem a mesma direção: o custo instalado de baterias de grande porte caiu cerca de 30% em 2025, e a energia firme de solar com armazenamento ficou abaixo de US$85/MWh em locais de boa insolação. Esses números descrevem usinas grandes, e um sistema de 150 Wp custa mais por kWh. Eles mostram a tendência da tecnologia, não o preço da horta.
+## Justificativa da escolha da energia solar
+O sistema solar foi escolhido como alternativa para avaliar a autonomia energética da horta e a possibilidade de utilizar uma fonte renovável no próprio local.
 
-No Brasil, a fonte já faz parte do planejamento. O Balanço Energético Nacional 2026, ano-base 2025, registra que 86,8% da matriz elétrica é renovável, com a solar em 11,4% da geração. A expansão da solar distribuída é um dos eixos das projeções de longo prazo da EPE, que preveem a geração distribuída perto de 78 GW em 2035.
+A instalação proposta utiliza dois módulos de 150 Wp, totalizando 300 Wp, associados a uma bateria LiFePO4 de 100 Ah.
 
-O solar também dá autonomia. Com bateria, a irrigação continua durante uma queda da rede, e a comunidade deixa de depender da distribuidora, de documentação de ligação e de reajuste tarifário. O projeto se liga ao Objetivo de Desenvolvimento Sustentável 7, energia limpa e acessível, da Agenda 2030 da ONU.
+Considerando HSP de projeto de 3,5 e desempenho global de 75%, a geração estimada é de 787,5 Wh/dia, superior ao consumo diário calculado de 584 Wh.
 
-
-## Limitações da energia
-O ganho climático deste projeto é pequeno. O fator médio de emissão da rede utilizado é de 0,0385 kg CO2/kWh. Para o consumo anual estimado de 213,16 kWh, as emissões operacionais associadas seriam de aproximadamente 8,21 kg de CO2 por ano.
-As emissões de ciclo de vida dos módulos solares e da bateria não foram calculadas neste projeto. Portanto, os 8,21 kg representam apenas o potencial operacional de emissões evitadas sob a hipótese de atendimento integral da carga pela geração solar, e não uma redução líquida comprovada.
-
-A fonte solar tem emissões de ciclo de vida, que vêm sobretudo da fabricação: o IPCC aponta mediana de 41 gCO₂eq/kWh para solar em telhado e 48 gCO₂eq/kWh para usinas solares, contra 820 do carvão e 490 do gás natural.
-Aplicadas aos 204,40 kWh anuais, essas medianas dão entre 8,38 e 9,81kg por ano, e a bateria não está nesses números.
-A vantagem climática do solar aparece quando ele substitui geração fóssil, e no Brasil isso depende do momento: a geração termelétrica cresceu 12,3% em 2025, para 169,9 TWh.
-
-A produção cai no inverno e em sequências de dias nublados, e por isso o sistema depende de bateria, que encarece a instalação e tem vida útil menor que a do painel. O destino final de painel e bateria precisa de plano. E o painel exposto na rua exige fixação segura contra furto.
-
-Sendo assim, o projeto sustenta a escolha do solar em custo, autonomia, simplicidade de implantação e valor educativo, e trata o benefício de CO₂ como pequeno e dependente de premissas.
+Essa margem é uma estimativa de dimensionamento e não representa garantia de atendimento em qualquer condição climática. O desempenho real depende da orientação, inclinação, sombreamento, temperatura, estado da bateria e condições meteorológicas.
 
 
-## Custos
+## Limitações da energia solar
+A geração depende da disponibilidade de radiação solar. Em períodos prolongados de baixa insolação, a produção pode diminuir e a bateria pode não armazenar energia suficiente para atender a toda a carga.
+
+A bateria também representa um componente importante do investimento inicial e possui vida útil limitada. A substituição da bateria não foi incluída no horizonte financeiro de dez anos, o que pode elevar o custo total real do sistema.
+
+Os painéis e demais componentes precisam de instalação segura, proteção contra intempéries e inspeção periódica. A localização em espaço público também exige atenção à fixação e à proteção contra danos ou furto.
+
+O benefício climático foi estimado considerando apenas as emissões operacionais associadas ao consumo elétrico. As emissões da fabricação, transporte e descarte dos componentes não foram calculadas.
+
+
+## Custos da alternativa B
 | Item | Valor |
 |---|---:|
 | Dois painéis de 150 Wp | R$ 1.200,00 |
 | Bateria LiFePO4 12,8 V / 100 Ah | R$ 1.000,00 |
-| Controlador MPPT 40 A | R$ 500,00 |
+| Controlador MPPT | R$ 500,00 |
 | Materiais e componentes BOS | R$ 600,00 |
 | Mão de obra de instalação | R$ 1.000,00 |
 | Documentação | R$ 400,00 |
 | **CAPEX-base** | **R$ 4.700,00** |
-| Adequações adicionais de infraestrutura | R$ 2.500,00 |
-| **Investimento inicial total** | **R$ 7.200,00** |
-| Conta mensal | R$ 8,33 |
-| Manutenção anual | R$ 150,00 |
-| Contas em 10 anos | R$ 999,60 |
-| Manutenção em 10 anos | R$ 1.500,00 |
-| **Custo total em 10 anos** | **R$ 9.699,60** |
+| Reserva para adequações adicionais | R$ 3.500,00 |
+| **Investimento inicial total** | **R$ 8.200,00** |
+| Conta mensal da distribuidora | R$ 0,00 |
+| Manutenção anual estimada | R$ 150,00 |
+| Contas em dez anos | R$ 0,00 |
+| Manutenção em dez anos | R$ 1.500,00 |
+| **Custo total em dez anos** | **R$ 9.700,00** |
 
-A estimativa de adequações adicionais de infraestrutura é provisória e depende de validação técnica e orçamentária.
+A reserva de R$ 3.500,00 é uma premissa preliminar para adequações específicas do local, como base e fixação, abrigo e proteção dos componentes e adequação da passagem de cabos.
+
+O valor precisa ser validado tecnicamente e por orçamento. Deve-se evitar duplicidade com itens já incluídos no BOS ou na mão de obra.
+
+A conta mensal de R$ 0,00 pressupõe que o sistema seja efetivamente isolado off-grid, sem consumo faturado pela distribuidora.
+
+A manutenção anual de R$ 150,00 é uma provisão simplificada para limpeza e inspeção preventiva, com participação comunitária. Não inclui substituição da bateria ou assistência técnica profissional.
+
+
+## Indicadores ambientais
+O consumo anual estimado é de 213,16 kWh.
+
+Com fator médio de emissão de 0,0385 kg CO₂/kWh, as emissões operacionais associadas ao consumo seriam:
+
+213,16 × 0,0385 = **aproximadamente 8,21 kg CO₂/ano**.
+
+Esse valor representa emissões operacionais potencialmente evitadas sob a hipótese de atendimento integral da carga pela geração solar. Não representa o benefício climático líquido do sistema, pois a fabricação, o transporte e o descarte dos componentes não foram contabilizados.
 
 
 ## Referências
 ANEEL. Resolução Normativa nº 1.000, de 7 de dezembro de 2021. Disponível em: https://www.rge-rs.com.br/sites/rge-rs/files/2022-04/REN%201000_2021.pdf
 
-EPE. Balanço Energético Nacional 2026, ano-base 2025, Relatório Síntese. Dados consultados em reportagens sobre o relatório: https://canalsolar.com.br/geracao-termeletrica-cresce-matriz-eletrica/ e https://capitaldigital.com.br/ia-devora-eletricidade-na-asia-e-antecipa-desafio-bilionario-para-o-redata/ (completar com o PDF oficial da EPE antes da entrega)
+EPE. Balanço Energético Nacional 2026, ano-base 2025. Disponível no portal da Empresa de Pesquisa Energética: https://www.epe.gov.br/
 
-EPE. Plano Decenal de Expansão de Energia (projeção da geração distribuída em 78 GW em 2035), conforme reportagem: https://canalsolar.com.br/matriz-eletrica-brasileira-projecao-governo-2035/ (completar com o documento oficial da EPE)
-
-IPCC. Climate Change 2014: Mitigation of Climate Change, Anexo III (emissões de ciclo de vida). Disponível em: https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf
+IPCC. Climate Change 2014: Mitigation of Climate Change, Anexo III. Disponível em: https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf
 
 IRENA. Renewable power generation costs in 2025. Abu Dhabi: International Renewable Energy Agency, 2026. Disponível em: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2026/Jul/IRENA_TEC_RPGC_in_2025_2026.pdf
 
-MCTI. Fator médio de emissão do SIN, média anual de 2023 (0,0385 tCO₂/MWh). Disponível em: https://eixos.com.br/brasil-tem-menor-taxa-de-emissao-de-carbono-na-geracao-eletrica-em-onze-anos/
-ONU. Agenda 2030 para o Desenvolvimento Sustentável, ODS 7 (completar com o link do portal da ONU Brasil).
+MCTI. Fatores de emissão do Sistema Interligado Nacional. Disponível em: https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/sirene/dados-e-ferramentas/fatores-de-emissao
 
 PINHO, J. T.; GALDINO, M. A. (org.). Manual de Engenharia para Sistemas Fotovoltaicos. Rio de Janeiro: CEPEL/CRESESB, 2014. Disponível em: http://www.cresesb.cepel.br/publicacoes/download/Manual_de_Engenharia_FV_2014.pdf
