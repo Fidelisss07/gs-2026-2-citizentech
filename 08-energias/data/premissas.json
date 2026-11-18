@@ -28,7 +28,7 @@
   "investimento_rede_equipamentos": 1000,
   "investimento_rede_documentacao": 1200,
   "custo_circuito_interno": 800,
-  "manutencao_rede_ano": 230,
+  "manutencao_rede_ano": 630,
 
   "_comment_custos_solar": "Investimento inicial da alternativa solar",
   "custo_painel": 1200,
