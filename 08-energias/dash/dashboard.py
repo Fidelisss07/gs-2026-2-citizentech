@@ -237,8 +237,6 @@ st.bar_chart(
     horizontal=True
 )
 
-
-
 # COMPARAÇÃO FINANCEIRA
 st.divider()
 st.subheader("Comparação financeira das alternativas")
@@ -265,9 +263,14 @@ with a:
     )
 
     st.metric(
-        "Manutenção anual",
-        brl(0)
+    "Manutenção e reposição anual",
+    brl(comp["manutencao_a_ano"])
     )
+
+st.caption(
+    "Provisão estimada para manutenção e reposição da infraestrutura "
+    "elétrica interna. Não representa uma cobrança da distribuidora."
+)
 
     st.caption(
         "Inclui instalação do padrão, equipamentos "
