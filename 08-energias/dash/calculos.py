@@ -216,10 +216,7 @@ def comparar(p, c):
     capex_a_extensao = p["custo_circuito_interno"]
 
     # ALTERNATIVA B — SISTEMA SOLAR
-    custo_paineis = (
-        p["quantidade_paineis"]
-        * p["custo_unitario_painel"]
-    )
+    custo_paineis = p["custo_painel"]
 
     capex_b_base = (
         custo_paineis
@@ -394,6 +391,7 @@ def simular_ano(
     p,
     wh_dia_fixo_sem_bomba,
     potencia_bomba_w=40,
+    horas_bomba_max=2.0,
     semente=42
 ):
     """
@@ -476,7 +474,7 @@ def simular_ano(
 
         if umid < 35:
             bomba_min = min(
-                60.0,
+                horas_bomba_max * 60,
                 (55 - umid) / 0.9
             )
 
@@ -640,10 +638,18 @@ def tudo(p=None, equip=None):
     )
 
     # Simulação anual
+    horas_bomba = float(
+        equip.loc[
+            mascara_bomba,
+            "horas_dia"
+        ].iloc[0]
+    )
+
     sim = simular_ano(
         p,
         fixo,
-        pot_bomba
+        pot_bomba,
+        horas_bomba
     )
 
     # Indicadores consolidados
