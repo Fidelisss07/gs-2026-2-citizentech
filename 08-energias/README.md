@@ -23,25 +23,54 @@ O projeto propõe a implantação de uma horta comunitária integrada a um ponto
 | Indicador | Valor | Origem |
 |---|---:|---|
 | Consumo energético | 17,52 kWh/mês | Equipamentos e período de 30 dias |
-| Economia operacional estimada | R$ 10,33/mês | Diferença entre conta da rede e custos operacionais solares, incluindo manutenção |
+| Consumo anual | 213,16 kWh/ano | Consumo diário × 365 dias |
 | Energia renovável atendida | Resultado da simulação | Simulação anual de geração, bateria e consumo |
-| Emissões operacionais potencialmente evitadas | 8,21 kg CO2/ano | 213,16 kWh × 0,0385 kg CO2/kWh |
-| Autonomia da bateria | 1,75 dia | 1.280 Wh × 0,8 / 584 Wh/dia |
+| Emissões operacionais potencialmente evitadas | 8,21 kg CO₂/ano | 213,16 kWh × 0,0385 kg CO₂/kWh |
+| Autonomia da bateria | 1,75 dia | 1.280 Wh × 0,8 ÷ 584 Wh/dia |
 
 
 ## Comparação financeira
-| Indicador | Rede elétrica | Solar |
+A comparação considera duas possibilidades: uma nova ligação à rede elétrica (A) e um sistema solar isolado com bateria (B). Também é apresentado um cenário alternativo (A2), no qual já existe um ponto de energia próximo e seria necessária apenas a extensão do circuito interno.
+
+### Cenário principal — nova ligação à rede elétrica versus solar
+| Indicador | Rede elétrica (A) | Solar off-grid (B) |
 |---|---:|---:|
-| Investimento inicial | R$ 4.700,00 | R$ 7.200,00 |
-| Conta mensal | R$ 31,16 | R$ 8,33 |
-| Manutenção anual | R$ 0,00 | R$ 150,00 |
-| Contas em 10 anos | R$ 3.739,20 | R$ 999,60 |
-| Manutenção em 10 anos | R$ 0,00 | R$ 1.500,00 |
-| **Custo acumulado em 10 anos** | **R$ 8.439,20** | **R$ 9.699,60** |
+| Investimento inicial | R$ 4.700,00 | R$ 8.200,00 |
+| Conta mensal | R$ 31,16 | R$ 0,00 |
+| Manutenção e reposição anual | R$ 630,00 | R$ 150,00 |
+| Contas em 10 anos | R$ 3.739,20 | R$ 0,00 |
+| Manutenção em 10 anos | R$ 6.300,00 | R$ 1.500,00 |
+| **Custo total em 10 anos** | **R$ 14.739,20** | **R$ 9.700,00** |
 
-A alternativa solar apresenta investimento inicial R$ 2.500,00 maior que o da nova ligação à rede elétrica. Apesar da redução dos custos operacionais mensais, o custo acumulado estimado do sistema solar permanece R$ 1.260,40 superior em dez anos.
+A alternativa solar exige investimento inicial R$ 3.500,00 superior ao da nova ligação à rede. Entretanto, considerando as contas e as provisões anuais de manutenção e reposição adotadas, apresenta custo total estimado R$ 5.039,20 inferior ao da rede no horizonte de dez anos.
 
-A estimativa de adequações adicionais de infraestrutura e a provisão de manutenção anual estão sujeitas à validação por cotação.
+O payback simples estimado do investimento adicional é de aproximadamente 4,1 anos.
+
+A provisão de R$ 630,00 por ano da alternativa de rede é uma premissa do grupo para manutenção e reposição da infraestrutura elétrica interna. Não corresponde a uma tarifa da distribuidora nem a um orçamento formal.
+
+### Cenário A2 — ponto de energia existente
+| Indicador | Rede com extensão (A2) | Solar off-grid (B) |
+|---|---:|---:|
+| Investimento inicial | R$ 800,00 | R$ 8.200,00 |
+| Conta mensal | R$ 31,16 | R$ 0,00 |
+| Manutenção e reposição anual | R$ 630,00 | R$ 150,00 |
+| **Custo total em 10 anos** | **R$ 10.839,20** | **R$ 9.700,00** |
+
+Nesse cenário, a diferença de custo acumulado é de R$ 1.139,20 a favor do sistema solar. O payback estimado em comparação com a extensão do circuito é de aproximadamente 8,7 anos.
+
+Os valores são estimativas preliminares, sem cotação formal, e dependem da validação das condições de instalação.
+
+
+## Dimensionamento energético
+- Consumo diário estimado: 584 Wh/dia.
+- Consumo mensal estimado: 17,52 kWh/mês.
+- Consumo anual estimado: 213,16 kWh/ano.
+- Potência solar instalada: 300 Wp, com dois módulos de 150 Wp.
+- HSP de projeto: 3,5.
+- Desempenho global do sistema: 75%.
+- Bateria: LiFePO4, 12,8 V e 100 Ah.
+- Profundidade de descarga considerada: 80%.
+- Autonomia estimada: 1,75 dia.
 
 
 ## Como executar o projeto
@@ -78,6 +107,7 @@ python dash/calculos.py
 python dash/gerar-figuras.py
 ```
 
+
 ## Estrutura do repositório
 ```
 gs-2026-2-citizentech/
@@ -101,3 +131,11 @@ gs-2026-2-citizentech/
 ├── fig/
 │   ├── diagrama_conceitual.jpg  ← diagrama conceitual de funcionamento do projeto
 ```
+
+
+## Observações
+Os resultados financeiros são projeções baseadas nas premissas do grupo. Não representam propostas comerciais ou orçamentos definitivos.
+
+A alternativa solar considera um sistema isolado off-grid, sem cobrança mensal da distribuidora. A troca da bateria não está incluída no horizonte financeiro de dez anos.
+
+A provisão anual de manutenção e reposição da rede deve ser validada por avaliação técnica e orçamento. O cenário A2 deve ser considerado separadamente, pois pressupõe a existência de um ponto de energia próximo.
