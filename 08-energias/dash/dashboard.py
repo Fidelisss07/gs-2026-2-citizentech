@@ -238,6 +238,7 @@ st.bar_chart(
 )
 
 
+
 # COMPARAÇÃO FINANCEIRA
 st.divider()
 st.subheader("Comparação financeira das alternativas")
@@ -249,18 +250,12 @@ st.caption(
 
 a, b = st.columns(2)
 
-
 # ALTERNATIVA A — REDE ELÉTRICA
 with a:
     st.markdown("### A. Rede elétrica")
 
     st.metric(
-        "Total de referência",
-        brl(comp["total_referencia_a"])
-    )
-
-    st.metric(
-        "Investimento de implementação",
+        "Investimento inicial",
         brl(comp["capex_a"])
     )
 
@@ -275,22 +270,16 @@ with a:
     )
 
     st.caption(
-        "O investimento considera instalação, equipamentos "
-        "e documentação da alternativa elétrica."
+        "Inclui instalação do padrão, equipamentos "
+        "e documentação para uma nova ligação."
     )
-
 
 # ALTERNATIVA B — ENERGIA SOLAR
 with b:
     st.markdown("### B. Energia solar")
 
     st.metric(
-        "Total de referência",
-        brl(comp["total_referencia_b"])
-    )
-
-    st.metric(
-        "Investimento de implementação",
+        "Investimento inicial",
         brl(comp["capex_b"])
     )
 
@@ -305,16 +294,16 @@ with b:
     )
 
     st.caption(
-        f"Equivalente mensal da manutenção: "
+        f"CAPEX-base: {brl(comp['capex_b_base'])}. "
+        f"Adequações adicionais: {brl(comp['reserva_solar'])}. "
+        f"Manutenção mensal equivalente: "
         f"{brl(comp['manutencao_b_mes'])}."
     )
 
-
-st.caption(
-    "Os totais de referência são valores consolidados utilizados "
-    "para apresentação. A projeção financeira de 10 anos considera "
-    "separadamente o investimento inicial, as contas mensais "
-    "e os custos recorrentes de manutenção."
+st.info(
+    f"A alternativa solar exige investimento inicial "
+    f"{brl(comp['diferenca_investimento'])} superior "
+    f"à nova ligação à rede."
 )
 
 # PROJEÇÃO FINANCEIRA — 10 ANOS
@@ -322,10 +311,9 @@ st.divider()
 st.subheader("Projeção de custos acumulados em 10 anos")
 
 st.caption(
-    "A projeção considera o investimento de implementação, "
-    "as contas de energia e os custos de manutenção. "
-    "Não considera a substituição da bateria, que pode ocorrer "
-    "próximo ao fim do horizonte analisado."
+    "A projeção considera o investimento inicial, as contas "
+    "de energia e a manutenção anual. Não considera a substituição "
+    "da bateria, inflação ou reajuste tarifário no cenário-base."
 )
 
 pa = comp["payback_a_anos"]
@@ -344,6 +332,17 @@ m[1].metric(
 )
 
 m[2].metric(
+    "Diferença de custo em 10 anos",
+    brl(abs(comp["diferenca_tco"])),
+    (
+        "Solar mais cara"
+        if comp["diferenca_tco"] > 0
+        else "Solar mais econômica"
+    ),
+    delta_color="off"
+)
+
+m[3].metric(
     "Retorno de B contra A",
     (
         "Imediato"
@@ -353,26 +352,27 @@ m[2].metric(
             if pa is None
             else f"{pa:.1f} anos"
         )
-    ),
-    help=(
-        "Comparação com a alternativa A: implantação de uma "
-        "nova conexão à rede elétrica."
     )
 )
 
-m[3].metric(
+st.caption(
+    "O cenário A2 considera um ponto de energia existente, "
+    "com investimento apenas na extensão do circuito interno."
+)
+
+st.metric(
+    "Custo acumulado em 10 anos — A2",
+    brl(comp["tco_a_extensao"])
+)
+
+st.metric(
     "Retorno de B contra A2",
     (
         "Sem retorno em 10 anos"
         if pb is None
         else f"{pb:.1f} anos"
-    ),
-    help=(
-        "Comparação com a alternativa A2: já existe um ponto "
-        "de energia próximo e só é necessário implantar o circuito interno."
     )
 )
-
 
 # SIMULAÇÃO OPERACIONAL
 st.divider()
