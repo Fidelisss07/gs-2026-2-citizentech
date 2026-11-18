@@ -1,9 +1,10 @@
+
 {
   "_comment_tarifas": "Tarifas e tributos",
-  "periodo_referencia": "1 mês = 30 dias para estimativa de consumo; 1 ano = 365 dias; horizonte financeiro = 10 anos",
+  "periodo_referencia": "1 mês = 30 dias; 1 ano = 365 dias; horizonte financeiro = 10 anos",
   "classe_tarifaria": "B3 - demais classes",
   "tarifa_enel_sem_tributos_kwh": 0.78938,
-  "tarifa_fonte": "Enel SP, Resolução Homologatória ANEEL 3.596/2026, classe B3 - demais classes, modalidade convencional. TUSD 472,42 + TE 316,96 R$/MWh.",
+  "tarifa_fonte": "Enel SP, Resolução Homologatória ANEEL 3.596/2026, classe B3 - demais classes.",
   "icms": 0.18,
   "pis_cofins": 0.06,
   "custo_disponibilidade_kwh_mes": 30,
@@ -11,7 +12,7 @@
 
   "_comment_emissoes": "Parâmetros de emissões",
   "fator_emissao_kg_kwh": 0.0385,
-  "fator_emissao_fonte": "MCTI, média anual do SIN em 2023: 0,0385 tCO2/MWh.",
+  "fator_emissao_fonte": "MCTI, média anual do SIN em 2023: 0,0385 kg CO2/kWh.",
 
   "_comment_solar": "Parâmetros técnicos do sistema solar",
   "hsp_projeto": 3.5,
@@ -23,28 +24,29 @@
   "painel_wp": 300,
   "bateria_ah": 100,
 
-  "_comment_custos_rede": "Investimento de implementação da alternativa de rede elétrica",
+  "_comment_custos_rede": "Investimento inicial da alternativa de rede",
   "investimento_rede_instalacao": 2500,
   "investimento_rede_equipamentos": 1000,
   "investimento_rede_documentacao": 1200,
   "custo_circuito_interno": 800,
 
-  "_comment_custos_solar": "Investimento de implementação da alternativa solar",
+  "_comment_custos_solar": "Investimento inicial da alternativa solar",
   "custo_painel": 1200,
+  "quantidade_paineis": 2,
+  "custo_unitario_painel": 600,
   "custo_bateria": 1000,
   "custo_bateria_por_ah": 10,
   "custo_controlador_mppt": 500,
   "custo_bos": 600,
   "custo_mao_obra_solar": 1000,
   "documentacao_solar": 400,
+  "reserva_adequacao_solar": 700,
 
   "_comment_operacao": "Contas mensais e custos recorrentes",
   "conta_solar_mensal": 8.33,
-  "manutencao_solar_ano": 1000,
+  "manutencao_solar_ano": 150,
 
-  "_comment_referencias": "Totais consolidados de referência para apresentação. Não são somados novamente ao custo acumulado em 10 anos.",
-  "total_referencia_rede": 4731.16,
-  "total_referencia_solar": 5708.33,
-
-  "observacao_equipamentos_comuns": "Bomba, lâmpadas, ESP32 e sensor são iguais nas duas alternativas e ficam fora da comparação dos investimentos de implementação."
+  "observacao_equipamentos_comuns": "Bomba, lâmpadas, ESP32 e sensor são iguais nas duas alternativas e ficam fora da comparação dos investimentos de implementação.",
+  "observacao_reserva_solar": "R$ 700 de reserva técnica estimada para adequações locais, ainda sujeita a cotação. Não duplicar itens já incluídos no BOS ou na mão de obra.",
+  "observacao_manutencao_solar": "R$ 150 por ano como provisão simplificada de limpeza e inspeção preventiva, com participação comunitária. Não inclui substituição de componentes nem assistência técnica profissional."
 }
