@@ -23,11 +23,12 @@
   "painel_wp": 300,
   "bateria_ah": 100,
 
-  "_comment_custos_rede": "Investimento inicial da alternativa de rede",
+  "_comment_custos_rede": "Investimento inicial e manutenção da alternativa de rede",
   "investimento_rede_instalacao": 2500,
   "investimento_rede_equipamentos": 1000,
   "investimento_rede_documentacao": 1200,
   "custo_circuito_interno": 800,
+  "manutencao_rede_ano": 230,
 
   "_comment_custos_solar": "Investimento inicial da alternativa solar",
   "custo_painel": 1200,
@@ -39,13 +40,15 @@
   "custo_bos": 600,
   "custo_mao_obra_solar": 1000,
   "documentacao_solar": 400,
-  "reserva_adequacao_solar": 2500,
+  "reserva_adequacao_solar": 3500,
 
   "_comment_operacao": "Contas mensais e custos recorrentes",
-  "conta_solar_mensal": 8.33,
+  "conta_solar_mensal": 0,
   "manutencao_solar_ano": 150,
 
   "observacao_equipamentos_comuns": "Bomba, lâmpadas, ESP32 e sensor são iguais nas duas alternativas e ficam fora da comparação dos investimentos de implementação.",
-  "observacao_reserva_solar": "R$ 2.500 de estimativa preliminar para adequações adicionais de infraestrutura, fixação, proteção e instalação elétrica específica. Valor sujeito a cotação e validação técnica. Não duplicar itens já incluídos no BOS ou na mão de obra.",
+  "observacao_manutencao_rede": "R$ 230 por ano como provisão estimada para inspeção preventiva da instalação elétrica interna, reaperto de conexões, verificação de proteções e pequenos reparos. Não representa cobrança da distribuidora nem orçamento contratado.",
+  "observacao_reserva_solar": "R$ 3.500 como premissa preliminar para adequações específicas do local, incluindo base e fixação, abrigo e proteção dos componentes e adequação da passagem de cabos. Valor sujeito a cotação e validação técnica. Não duplicar itens já incluídos no BOS ou na mão de obra.",
+  "observacao_conta_solar": "R$ 0,00 por mês, considerando a alternativa solar como sistema isolado off-grid, sem consumo faturado pela distribuidora.",
   "observacao_manutencao_solar": "R$ 150 por ano como provisão simplificada de limpeza e inspeção preventiva, com participação comunitária. Não inclui substituição de componentes nem assistência técnica profissional."
 }
