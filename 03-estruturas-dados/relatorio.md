@@ -104,14 +104,6 @@ Para a região, a vantagem é ter o problema registrado em dados que podem ser c
 - **ElevenLabs:** voz de IA que narra o vídeo de demonstração, lendo o roteiro do trio.
 - **Decisões do projeto:** foram aprovadas pelo Fidelis, que conferiu o checklist e os testes com a ajuda do Claude (chat). São elas: as categorias, os vetores paralelos, os critérios de ordenação, os dois motivos do alerta e o "0" para sair.
 
-## 10. O que cada um fez
-
-| Integrante | O que fez |
-| --- | --- |
-| Gustavo Fidelis de Souza e Silva | Definiu as decisões do projeto (categorias, vetores paralelos, critérios de ordenação e alerta), conferiu o código e os testes feitos com o Claude Code e revisou o vídeo de demonstração |
-| Rafael Meirelles | [FIDELIS: preencher o que o Rafael fez] |
-| Anna Luisa Lima | Escreveu a seção 8, sobre os benefícios para a comunidade |
-
 ## Referências
 
 - Folha VP. *SUB-MO: mobilização contra o descarte ilegal de entulho e lixo*. 24 jul. 2026. Disponível em: https://folhavponline.com.br/acontece-na-regiao/sub-mo-faz-mobilizacao-contra-o-descarte-irregular-de-entulho-e-lixo/

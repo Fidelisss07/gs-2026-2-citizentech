@@ -93,14 +93,6 @@ Vídeo de demonstração (2min40): [`video/demonstracao_mapa_pontos_viciados.mp4
 
 O vídeo mostra o programa rodando com os dados de exemplo, ao lado de uma animação dos vetores, da busca e da ordenação. A animação foi feita com o Claude Code, e a narração usa uma voz de IA (ElevenLabs).
 
-## O que cada um fez
-
-| Integrante | O que fez |
-| --- | --- |
-| Gustavo Fidelis de Souza e Silva | Definiu as decisões do projeto, conferiu o código e os testes e revisou o vídeo |
-| Rafael Meirelles | [a preencher] |
-| Anna Luisa Lima | Escreveu os benefícios para a comunidade (seção 8 do relatório) |
-
 ## Uso de IA
 
 - **Claude Code (Anthropic):** montou o checklist do PDF e escreveu o rascunho do código, dos roteiros de teste, do diagrama e do relatório.
